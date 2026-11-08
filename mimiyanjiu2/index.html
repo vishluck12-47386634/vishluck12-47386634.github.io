@@ -1,0 +1,1315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秘密研究所好好学习天天向上-学习方向_每日更新_适合人群</title>
+  <meta name="description" content="秘密研究所好好学习天天向上是专注学习方向与每日内容的门户，汇总学习方法、学科分类、热门条目与用户讨论，适合学生与自学者规划学习节奏。">
+  <meta name="keywords" content="学习方向,每日更新,学习方法,学科分类,自学规划">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23152b3d'/%3E%3Cpath d='M25 62 L50 24 L75 62 Z' fill='%23f2c94c'/%3E%3Ccircle cx='50' cy='70' r='9' fill='%23f2c94c'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --ink: #1b2a3a;
+      --ink-soft: #3e5264;
+      --muted: #6b7f8f;
+      --paper: #f7f4ed;
+      --panel: #ffffff;
+      --line: #e2dbce;
+      --brand: #152b3d;
+      --brand-2: #2e5a6e;
+      --accent: #c97a2e;
+      --accent-soft: #f4e3cf;
+      --gold: #f2c94c;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow: 0 12px 30px rgba(18, 38, 54, 0.08);
+      --shadow-sm: 0 4px 12px rgba(18, 38, 54, 0.06);
+      --max: 1380px;
+      --announce-h: 38px;
+      --header-h: 72px;
+      --gap: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: var(--brand-2); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    img, svg { max-width: 100%; vertical-align: middle; }
+    button { font: inherit; cursor: pointer; }
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      background: var(--brand);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      z-index: 200;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 8px; }
+    /* 吸顶公告条 */
+    .announce {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      background: var(--brand);
+      color: #f7f4ed;
+      font-size: 13px;
+      letter-spacing: .04em;
+      padding: 0 16px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .announce strong { color: var(--gold); font-weight: 600; }
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 90;
+      height: var(--header-h);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+    }
+    .header-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--brand);
+      white-space: nowrap;
+      letter-spacing: .02em;
+    }
+    .brand svg { width: 36px; height: 36px; flex: 0 0 auto; }
+    .header-nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      flex-wrap: wrap;
+    }
+    .header-nav a { color: var(--ink-soft); padding: 4px 0; }
+    .header-nav a:hover { color: var(--accent); }
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .search-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-wrap input {
+      width: 190px;
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      padding: 0 16px;
+      font-size: 13px;
+      color: var(--ink);
+      transition: border .2s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); outline: none; }
+    .search-wrap button {
+      position: absolute;
+      right: 4px;
+      height: 28px;
+      padding: 0 12px;
+      border: none;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 12px;
+    }
+    .search-feedback {
+      position: absolute;
+      top: 42px;
+      right: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      box-shadow: var(--shadow-sm);
+      display: none;
+      min-width: 220px;
+      z-index: 95;
+    }
+    .search-feedback.show { display: block; }
+    /* 首屏 */
+    .hero {
+      max-width: var(--max);
+      margin: 28px auto 0;
+      padding: 0 24px;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 32px;
+      background: linear-gradient(135deg, #152b3d 0%, #24475b 62%, #2e5a6e 100%);
+      border-radius: 22px;
+      padding: 42px 44px;
+      color: #f7f4ed;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hero-inner::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      bottom: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(242,201,76,.24), transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(26px, 3.4vw, 38px);
+      line-height: 1.3;
+      letter-spacing: .01em;
+      color: #fff;
+      font-weight: 700;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #d9e4ea;
+      max-width: 540px;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin: 22px 0 26px;
+      font-size: 13px;
+      color: #c8d6de;
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-meta i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 42px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: .2s;
+    }
+    .btn-gold { background: var(--gold); color: #1b2a3a; }
+    .btn-gold:hover { background: #e9bc32; color: #1b2a3a; }
+    .btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); color: #fff; }
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-visual svg { width: 100%; max-width: 380px; height: auto; }
+    /* 主布局 */
+    .layout {
+      max-width: var(--max);
+      margin: 28px auto 0;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 184px minmax(0, 1fr) 250px;
+      gap: var(--gap);
+      align-items: start;
+    }
+    /* 左栏 */
+    .sidebar-left {
+      position: sticky;
+      top: calc(var(--announce-h) + var(--header-h) + 18px);
+      max-height: calc(100vh - var(--announce-h) - var(--header-h) - 36px);
+      overflow-y: auto;
+      padding-right: 4px;
+      scrollbar-width: thin;
+    }
+    .side-block {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .side-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: .06em;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .side-title::before {
+      content: "";
+      width: 3px;
+      height: 13px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .side-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+    .side-nav a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      transition: .15s;
+    }
+    .side-nav a:hover, .side-nav a:focus-visible {
+      background: var(--accent-soft);
+      color: var(--brand);
+    }
+    .side-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .side-tags a {
+      display: inline-block;
+      padding: 5px 10px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--ink-soft);
+      transition: .15s;
+    }
+    .side-tags a:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--brand); }
+    /* 中栏 */
+    .main-col { min-width: 0; display: flex; flex-direction: column; gap: 26px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .panel-tight { padding: 22px 24px; }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 20px;
+      color: var(--brand);
+      letter-spacing: .01em;
+      font-weight: 700;
+    }
+    .section-head p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .section-link { font-size: 13px; color: var(--brand-2); white-space: nowrap; }
+    /* 简介 */
+    .intro-text p { margin: 0 0 14px; color: var(--ink-soft); }
+    .intro-text p:last-child { margin-bottom: 0; }
+    .kw { color: var(--brand); font-weight: 600; }
+    /* 热门卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 15px 15px 13px;
+      background: #fdfcf9;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: .18s;
+    }
+    .content-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+    .card-type {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 4px;
+      padding: 2px 8px;
+      letter-spacing: .02em;
+    }
+    .content-card h3 {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .content-card p {
+      margin: 0;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .card-tags span {
+      font-size: 11px;
+      color: var(--ink-soft);
+      background: var(--paper);
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      border-top: 1px dashed var(--line);
+      padding-top: 8px;
+    }
+    .card-meta b { color: var(--accent); font-weight: 600; }
+    /* 最新更新 */
+    .update-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+    .update-list li {
+      display: flex;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 13.5px;
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .u-name { color: var(--ink); font-weight: 600; flex: 0 0 auto; min-width: 130px; }
+    .update-list .u-summary { color: var(--muted); font-size: 13px; }
+    /* 分类 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+    }
+    .cat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      transition: .15s;
+    }
+    .cat-item:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--brand); }
+    .cat-item span { font-size: 11px; color: var(--muted); }
+    /* 深度解析 */
+    .deep h3 {
+      font-size: 16.5px;
+      color: var(--brand);
+      margin: 22px 0 8px;
+      padding-left: 12px;
+      border-left: 4px solid var(--gold);
+      line-height: 1.4;
+    }
+    .deep h3:first-of-type { margin-top: 0; }
+    .deep p { margin: 0 0 12px; color: var(--ink-soft); font-size: 14px; line-height: 1.85; }
+    .deep ul { margin: 0 0 14px; padding-left: 20px; color: var(--ink-soft); font-size: 14px; }
+    .deep li { margin-bottom: 6px; }
+    .deep .note-box {
+      background: #fbf6ec;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      margin: 18px 0;
+    }
+    /* 指南 */
+    .guide-steps { counter-reset: step; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    .guide-steps li {
+      position: relative;
+      padding-left: 48px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+    .guide-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 4px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      cursor: pointer;
+      padding: 12px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: 400;
+      flex: 0 0 auto;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item .faq-answer {
+      padding: 0 0 14px;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .comment-item {
+      background: #fdfcf9;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+    .comment-item .c-user {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .comment-item .c-user i {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-style: normal;
+      font-size: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    /* 资讯 */
+    .news-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    .news-list li { border-bottom: 1px dashed var(--line); padding-bottom: 12px; }
+    .news-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-list .n-title { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .news-list .n-date { font-size: 11.5px; color: var(--muted); margin-left: 8px; }
+    .news-list .n-summary { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    /* 相关推荐 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .rec-tags a {
+      display: inline-block;
+      padding: 7px 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      transition: .15s;
+    }
+    .rec-tags a:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--brand); }
+    /* 精选证言 */
+    .quotes { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .quote-card {
+      background: #f8f3e9;
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+    .quote-card b { display: block; margin-top: 8px; color: var(--brand); font-size: 12px; font-weight: 600; }
+    /* 右栏 */
+    .sidebar-right {
+      position: sticky;
+      top: calc(var(--announce-h) + var(--header-h) + 18px);
+      max-height: calc(100vh - var(--announce-h) - var(--header-h) - 36px);
+      overflow-y: auto;
+      padding-left: 2px;
+      scrollbar-width: thin;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list a {
+      display: block;
+      padding: 6px 10px;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+    }
+    .toc-list a:hover { background: var(--accent-soft); color: var(--brand); border-left-color: var(--accent); }
+    .hot-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; counter-reset: hot; }
+    .hot-list li { counter-increment: hot; }
+    .hot-list a {
+      display: flex;
+      gap: 8px;
+      padding: 7px 8px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+    .hot-list a::before {
+      content: counter(hot);
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .hot-list li:nth-child(-n+3) a::before { background: var(--accent-soft); color: var(--accent); }
+    .hot-list a:hover { background: var(--accent-soft); color: var(--brand); }
+    .ext-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .ext-list a {
+      display: block;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      padding: 8px 10px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      transition: .15s;
+    }
+    .ext-list a:hover { border-color: var(--accent); color: var(--brand); }
+    /* 页尾 */
+    .site-footer {
+      margin-top: 48px;
+      background: var(--brand);
+      color: #c8d6de;
+      padding: 38px 24px 20px;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; color: #fff; margin-bottom: 10px; }
+    .footer-brand svg { width: 30px; height: 30px; }
+    .footer-desc { font-size: 13px; line-height: 1.8; max-width: 320px; }
+    .footer-col h4 { margin: 0 0 12px; font-size: 13px; color: #fff; letter-spacing: .06em; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+    .footer-col a { color: #c8d6de; font-size: 12.5px; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: var(--max);
+      margin: 26px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.14);
+      font-size: 11.5px;
+      color: #93a8b5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    /* 锚点偏移 */
+    [id] { scroll-margin-top: calc(var(--announce-h) + var(--header-h) + 18px); }
+    /* 平板 */
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar-left, .sidebar-right { position: static; max-height: none; overflow: visible; }
+      .sidebar-left { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .sidebar-left .side-block { margin-bottom: 0; }
+      .sidebar-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .sidebar-right .side-block { margin-bottom: 0; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .header-nav { display: none; }
+    }
+    /* 手机 */
+    @media (max-width: 640px) {
+      .announce { font-size: 11.5px; gap: 10px; padding: 0 10px; }
+      .announce span:nth-child(2) { display: none; }
+      .header-inner { padding: 0 14px; gap: 12px; }
+      .search-wrap input { width: 130px; }
+      .hero { padding: 0 14px; margin-top: 18px; }
+      .hero-inner { padding: 28px 22px; border-radius: 16px; }
+      .hero h1 { font-size: 24px; }
+      .layout { padding: 0 14px; }
+      .panel { padding: 20px 16px; }
+      .sidebar-left, .sidebar-right { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .update-list li { flex-direction: column; gap: 2px; }
+      .update-list .u-name { min-width: 0; }
+      .footer-inner { grid-template-columns: 1fr; gap: 22px; }
+      .comment-grid { grid-template-columns: 1fr; }
+      .brand { font-size: 15px; }
+      .brand svg { width: 30px; height: 30px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">跳到主要内容</a>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce" role="region" aria-label="站内公告">
+    <span>📌 本周更新：<strong>学习方法清单</strong>与「学科入门路径」已上线</span>
+    <span>每天 08:00 更新学习条目与讨论摘要</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" rx="22" fill="#152b3d"/>
+          <path d="M25 62 L50 24 L75 62 Z" fill="#f2c94c"/>
+          <circle cx="50" cy="72" r="8" fill="#f2c94c"/>
+        </svg>
+        秘密研究所好好学习天天向上
+      </div>
+      <nav class="header-nav" aria-label="顶部主题导航">
+        <a href="#hot-content">热门内容</a>
+        <a href="#latest-update">每日更新</a>
+        <a href="#categories">学习方向</a>
+        <a href="#deep-analysis">深度解析</a>
+        <a href="#faq">常见问答</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input id="siteSearch" type="search" placeholder="搜索学习条目…" aria-label="搜索学习条目">
+          <button id="searchBtn" type="button">查找</button>
+          <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="pageTitle">
+    <div class="hero-inner">
+      <div>
+        <h1 id="pageTitle">秘密研究所好好学习天天向上</h1>
+        <p class="hero-desc">
+          一个围绕学习方向、每日更新与学习方法的内容门户。聚合学科入门路径、自学者经验、热门学习条目与真实讨论，帮助你把零散时间变成清晰的学习节奏。
+        </p>
+        <div class="hero-meta">
+          <span><i></i> 每日 08:00 更新</span>
+          <span><i></i> 12 个学习方向</span>
+          <span><i></i> 适合学生与自学者</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#hot-content">浏览热门内容</a>
+          <a class="btn btn-ghost" href="#categories">按学习方向找</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="24" y="34" width="372" height="232" rx="18" fill="#ffffff" opacity=".08"/>
+          <rect x="48" y="58" width="324" height="184" rx="12" fill="#ffffff" opacity=".1"/>
+          <rect x="72" y="82" width="168" height="12" rx="6" fill="#f2c94c" opacity=".9"/>
+          <rect x="72" y="108" width="252" height="8" rx="4" fill="#ffffff" opacity=".35"/>
+          <rect x="72" y="128" width="214" height="8" rx="4" fill="#ffffff" opacity=".25"/>
+          <rect x="72" y="148" width="236" height="8" rx="4" fill="#ffffff" opacity=".25"/>
+          <rect x="72" y="180" width="90" height="30" rx="15" fill="#f2c94c"/>
+          <rect x="174" y="180" width="90" height="30" rx="15" fill="#ffffff" opacity=".18"/>
+          <circle cx="322" cy="94" r="30" fill="#f2c94c" opacity=".22"/>
+          <circle cx="322" cy="94" r="16" fill="#f2c94c" opacity=".8"/>
+          <path d="M272 216 L322 196 L372 236" stroke="#f2c94c" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容 -->
+  <div class="layout">
+    <!-- 左栏 -->
+    <aside class="sidebar-left" aria-label="频道与分类索引">
+      <div class="side-block">
+        <p class="side-title">学习频道</p>
+        <ul class="side-nav">
+          <li><a href="#hot-content">热门内容推荐</a></li>
+          <li><a href="#latest-update">每日更新</a></li>
+          <li><a href="#categories">学习方向分类</a></li>
+          <li><a href="#deep-analysis">深度解析</a></li>
+          <li><a href="#guide">入门指南</a></li>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#comments">学习者评论</a></li>
+          <li><a href="#news">学习资讯</a></li>
+        </ul>
+      </div>
+      <div class="side-block">
+        <p class="side-title">按类型筛选</p>
+        <div class="side-tags">
+          <a href="#hot-content">学习方法</a>
+          <a href="#hot-content">学科入门</a>
+          <a href="#hot-content">时间管理</a>
+          <a href="#hot-content">笔记技巧</a>
+          <a href="#hot-content">考试复盘</a>
+          <a href="#hot-content">自学路径</a>
+        </div>
+      </div>
+      <div class="side-block">
+        <p class="side-title">适合场景</p>
+        <div class="side-tags">
+          <a href="#guide">通勤听学</a>
+          <a href="#guide">睡前复盘</a>
+          <a href="#guide">周末集中学</a>
+          <a href="#guide">碎片时间</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="main-col" id="main-content">
+      <!-- 1 内容简介 -->
+      <section class="panel" id="about" aria-labelledby="aboutTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="aboutTitle">关于这个学习内容门户</h2>
+            <p>先了解内容范围，再决定从哪一类开始</p>
+          </div>
+        </div>
+        <div class="intro-text">
+          <p>
+            <span class="kw">秘密研究所好好学习天天向上</span>是一个以学习方向、每日学习条目与学习方法讨论为主的内容门户。它面向学生、自学者和希望重建学习节奏的职场人，把学科入门、时间安排、笔记整理、考试复盘等常见需求整理成可浏览的内容卡片与专题列表。页面不提供课程售卖或会员服务，所有入口均指向站内栏目与分类索引。
+          </p>
+          <p>
+            如果你正在找“学习方法”或“学科入门路径”，可以从热门内容推荐与学习方向分类进入；如果你更关心“每天能更新什么”，每日更新与学习资讯板块会按日期列出具体条目。对于比较型需求，例如“自学和跟课哪个更适合自己”，深度解析与常见问答会给出对照思路。
+          </p>
+          <p>
+            内容组织以“可搜索的具体名称”为主，例如“费曼学习法入门”“番茄钟与时间块对比”“错题本整理步骤”，而不是泛泛的栏目口号。页面中的热度、评分与评论均为示例数据，用于展示内容结构，不构成对任何具体课程或平台的评价。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2 热门内容推荐 -->
+      <section class="panel" id="hot-content" aria-labelledby="hotTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="hotTitle">热门内容推荐：具体学习条目</h2>
+            <p>按学习方向与消费场景挑选的 8 个可浏览内容</p>
+          </div>
+          <a class="section-link" href="#categories">查看全部分类 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="content-card">
+            <span class="card-type">学习方法</span>
+            <h3>费曼学习法入门：四步复述练习</h3>
+            <p>用“讲给别人听”的方式检验理解程度，适合考前自查与概念梳理，附常见卡点。</p>
+            <div class="card-tags"><span>费曼技巧</span><span>考前自查</span><span>概念梳理</span></div>
+            <div class="card-meta"><span>热度 <b>4.8</b></span><span>更新 2 天前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">时间管理</span>
+            <h3>番茄钟与时间块对比：哪种适合你</h3>
+            <p>从专注时长、任务切换成本、记录方式三个角度比较两种时间管理方法。</p>
+            <div class="card-tags"><span>番茄钟</span><span>时间块</span><span>专注力</span></div>
+            <div class="card-meta"><span>热度 <b>4.6</b></span><span>更新 3 天前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">学科入门</span>
+            <h3>零基础学统计：先弄懂这 5 个概念</h3>
+            <p>面向自学者的统计入门清单，从变量、分布到假设检验，给出阅读顺序。</p>
+            <div class="card-tags"><span>统计学入门</span><span>零基础</span><span>自学路径</span></div>
+            <div class="card-meta"><span>热度 <b>4.5</b></span><span>更新 5 天前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">笔记技巧</span>
+            <h3>康奈尔笔记法：课堂记录与复盘模板</h3>
+            <p>把一页纸分成线索、笔记、总结三栏，适合课堂记录与课后快速回顾。</p>
+            <div class="card-tags"><span>康奈尔笔记</span><span>课堂记录</span><span>课后复盘</span></div>
+            <div class="card-meta"><span>热度 <b>4.4</b></span><span>更新 1 周前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">考试复盘</span>
+            <h3>错题本整理步骤：从抄题到归因</h3>
+            <p>错题本不只是抄题，重点在错误类型标注与二次练习安排，附整理流程。</p>
+            <div class="card-tags"><span>错题本</span><span>错误归因</span><span>二次练习</span></div>
+            <div class="card-meta"><span>热度 <b>4.3</b></span><span>更新 1 周前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">自学路径</span>
+            <h3>三个月自学计划：目标拆到每周</h3>
+            <p>把长期目标拆成月、周、日三级任务，适合需要外部节奏参考的自学者。</p>
+            <div class="card-tags"><span>自学计划</span><span>目标拆解</span><span>每周任务</span></div>
+            <div class="card-meta"><span>热度 <b>4.2</b></span><span>更新 2 周前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">阅读方法</span>
+            <h3>主题阅读怎么开始：选书与并读顺序</h3>
+            <p>围绕一个主题选 3—5 本书并安排并读顺序，减少读到一半放弃的情况。</p>
+            <div class="card-tags"><span>主题阅读</span><span>选书顺序</span><span>并读</span></div>
+            <div class="card-meta"><span>热度 <b>4.1</b></span><span>更新 2 周前</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">记忆方法</span>
+            <h3>间隔重复怎么安排复习间隔</h3>
+            <p>从记忆曲线出发，给出适合日常学习的复习间隔参考与记录方式。</p>
+            <div class="card-tags"><span>间隔重复</span><span>记忆曲线</span><span>复习计划</span></div>
+            <div class="card-meta"><span>热度 <b>4.0</b></span><span>更新 3 周前</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="panel" id="latest-update" aria-labelledby="latestTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="latestTitle">每日更新：最近上线的学习条目</h2>
+            <p>按日期列出，每条配一句内容摘要</p>
+          </div>
+        </div>
+        <ul class="update-list">
+          <li><span class="u-name">学习环境布置清单</span><span class="u-summary">光线、桌面分区与手机放置位置，减少开始学习前的摩擦。</span></li>
+          <li><span class="u-name">晨间 30 分钟学习流程</span><span class="u-summary">适合通勤前或起床后的短时学习安排，含任务选择建议。</span></li>
+          <li><span class="u-name">概念图怎么画更清晰</span><span class="u-summary">从中心词到分支关系，给出一页纸概念图的绘制顺序。</span></li>
+          <li><span class="u-name">复盘笔记三问模板</span><span class="u-summary">每天用三个问题回顾学习内容，降低复盘门槛。</span></li>
+          <li><span class="u-name">自学遇到瓶颈怎么办</span><span class="u-summary">区分知识缺口与动力缺口，给出不同应对方式。</span></li>
+          <li><span class="u-name">听课与自学如何搭配</span><span class="u-summary">按学科难度与个人基础选择主次，避免重复投入。</span></li>
+          <li><span class="u-name">周末集中学习时间表</span><span class="u-summary">把 4 小时拆成三段，中间安排短休息与回顾。</span></li>
+          <li><span class="u-name">错题重做的最佳间隔</span><span class="u-summary">根据错误类型安排重做时间，减少“当时会、过后忘”。</span></li>
+          <li><span class="u-name">学习资料整理命名规则</span><span class="u-summary">统一文件命名与目录层级，方便检索与跨设备同步。</span></li>
+          <li><span class="u-name">睡前 10 分钟回顾法</span><span class="u-summary">用口头复述与关键词回忆结束一天，不增加额外负担。</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="panel" id="categories" aria-labelledby="catTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="catTitle">学习方向分类</h2>
+            <p>按你正在找的具体类别进入</p>
+          </div>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="#hot-content">学习方法 <span>8 条</span></a>
+          <a class="cat-item" href="#hot-content">时间管理 <span>6 条</span></a>
+          <a class="cat-item" href="#hot-content">笔记技巧 <span>5 条</span></a>
+          <a class="cat-item" href="#hot-content">考试复盘 <span>7 条</span></a>
+          <a class="cat-item" href="#hot-content">自学路径 <span>9 条</span></a>
+          <a class="cat-item" href="#hot-content">学科入门 <span>11 条</span></a>
+          <a class="cat-item" href="#hot-content">阅读方法 <span>4 条</span></a>
+          <a class="cat-item" href="#hot-content">记忆方法 <span>6 条</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析正文 -->
+      <section class="panel deep" id="deep-analysis" aria-labelledby="deepTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="deepTitle">深度解析：学习节奏如何安排更稳</h2>
+            <p>从目标、任务、复盘三个层面拆开讲</p>
+          </div>
+        </div>
+        <h3>先分清“学什么”和“怎么学”</h3>
+        <p>
+          很多学习计划失败，并不是因为不努力，而是把方向问题和执行问题混在一起。方向问题包括：当前要补的是基础概念，还是解题熟练度；是应试范围，还是兴趣拓展。执行问题则是：每天能拿出多少时间、在什么环境下学、用什么方式记录。
+        </p>
+        <p>
+          把这两类问题分开之后，<span class="kw">秘密研究所好好学习天天向上</span>里的分类就能直接对应：学科入门解决方向问题，时间管理与笔记技巧解决执行问题。先选一个方向，再配一套执行方式，比同时改五个习惯更稳。
+        </p>
+        <h3>把长期目标拆成周任务</h3>
+        <p>
+          长期目标通常写成“三个月学完某科”或“考试达到某个分数”，但这类目标无法直接指导每天做什么。更实用的做法是拆到周：每周只保留 2—3 个可验收任务，例如“完成两章概念图”“重做 20 道错题”“复述三个核心概念”。
+        </p>
+        <ul>
+          <li>每周任务数量不超过 3 个，避免互相挤占。</li>
+          <li>每个任务写清验收标准，例如“能不看资料讲出步骤”。</li>
+          <li>周末留 30 分钟回顾，决定下周保留还是替换。</li>
+        </ul>
+        <div class="note-box">
+          如果你在“自学和跟课”之间犹豫，可以先看学习方向分类中的入门路径，再用一周时间各试两次，比较理解速度和卡点位置，而不是只看课程介绍。
+        </div>
+        <h3>每日更新内容怎么用</h3>
+        <p>
+          每日更新板块按日期列出条目，适合作为“今天学什么”的参考，但不建议全部收藏。更有效的方式是每次只取一条，与当前周任务相关的内容优先。例如本周在练错题归因，就只看错题本整理与复盘类条目。
+        </p>
+        <p>
+          学习方向分类和热门内容推荐中的标签也可以当作搜索词使用。把“番茄钟与时间块对比”“康奈尔笔记法”“间隔重复”这些具体名称记下来，比记“高效学习”更容易在站内找到对应内容。
+        </p>
+        <h3>复盘比新增更重要</h3>
+        <p>
+          学习节奏能否持续，取决于复盘频率。建议每天用 5—10 分钟做一次简短回顾：今天理解了哪个概念、卡在哪里、明天第一件事做什么。每周再做一次稍长的整理，把重复出现的卡点单独列出来，作为下一周的重点。
+        </p>
+        <p>
+          在<span class="kw">秘密研究所好好学习天天向上</span>的内容里，复盘相关条目通常与错题本、概念图、间隔重复放在相邻位置。把它们组合使用，比单独收藏某一个方法更容易形成完整流程。
+        </p>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="panel" id="guide" aria-labelledby="guideTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="guideTitle">入门指南：从哪开始、怎么找</h2>
+            <p>给第一次浏览的学习者一条清晰路径</p>
+          </div>
+        </div>
+        <ol class="guide-steps">
+          <li><b>先确定一个方向。</b>在学习方向分类里选择与你当前需求最接近的一类，例如“学科入门”或“时间管理”，不要一次打开全部类别。</li>
+          <li><b>用具体名称搜索。</b>顶部搜索框支持按热门卡片标题和更新条目标题查找。输入“费曼”“错题本”“间隔重复”等具体词，比输入泛词更容易命中。</li>
+          <li><b>按场景筛选。</b>左栏的“适合场景”标签可以帮助你在通勤、睡前、周末集中学习之间选择，减少内容与时间不匹配的情况。</li>
+          <li><b>收藏一条，执行一周。</b>从热门内容推荐中只选一条与当前任务相关的条目，按其中的步骤试一周，再决定是否保留。</li>
+          <li><b>用问答补判断。</b>常见问答覆盖“适合什么人看”“多久更新一次”“自学和跟课怎么选”等比较型问题，适合在开始前快速判断。</li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="panel" id="faq" aria-labelledby="faqTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="faqTitle">常见问答：学习方向与使用场景</h2>
+            <p>围绕类型、更新频率与选择依据</p>
+          </div>
+        </div>
+        <details class="faq-item">
+          <summary>秘密研究所好好学习天天向上的内容适合什么人看？</summary>
+          <div class="faq-answer">适合正在规划学习节奏的学生、自学者和希望重建学习习惯的职场人。内容以学习方法、学科入门、时间管理和复盘技巧为主，不限定具体考试或课程体系。</div>
+        </details>
+        <details class="faq-item">
+          <summary>这里的学习内容一般多久更新一次？</summary>
+          <div class="faq-answer">每日更新板块按天列出新条目，热门内容推荐与分类入口会根据条目积累情况调整。页面顶部公告条会提示近期上线的主题，具体更新时间以列表中的日期为准。</div>
+        </details>
+        <details class="faq-item">
+          <summary>自学和跟课哪个更适合自己？</summary>
+          <div class="faq-answer">可以先看深度解析中关于方向问题与执行问题的区分。如果基础概念缺口较大，跟课能提供结构；如果已有框架、需要练习与复盘，自学加错题整理更灵活。建议各试一周再比较卡点位置。</div>
+        </details>
+        <details class="faq-item">
+          <summary>只看每日更新能不能跟上学习进度？</summary>
+          <div class="faq-answer">每日更新适合作为选题参考，但不建议替代完整的学习流程。更稳的方式是把每日更新中的条目与一个周任务绑定，只取其中一条，执行后再回顾效果。</div>
+        </details>
+        <details class="faq-item">
+          <summary>学习方法类内容需要按顺序读吗？</summary>
+          <div class="faq-answer">不必严格按顺序。可以先从与当前问题最接近的条目开始，例如专注力不足先看时间管理，记不住先看间隔重复。深度解析提供整体框架，适合在有了具体问题之后再读。</div>
+        </details>
+        <details class="faq-item">
+          <summary>站内的热度与评分代表真实排名吗？</summary>
+          <div class="faq-answer">热度与评分是示例数据，用于展示内容卡片的结构，不代表真实平台排名或用户评价。选择内容时建议以标题、摘要和自身需求是否匹配为主要依据。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="panel" id="comments" aria-labelledby="commentsTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="commentsTitle">学习者评论</h2>
+            <p>来自不同学习场景的 12 条反馈</p>
+          </div>
+        </div>
+        <div class="comment-grid">
+          <div class="comment-item"><div class="c-user"><i>林</i>林间自习</div>费曼学习法那篇的复述步骤写得很具体，我照着练了三天，讲概念时卡住的地方明显少了。</div>
+          <div class="comment-item"><div class="c-user"><i>陈</i>陈小满</div>番茄钟和时间块对比很实用，之前一直纠结用哪个，看完决定先按任务类型分开用。</div>
+          <div class="comment-item"><div class="c-user"><i>周</i>周末考生</div>错题本整理步骤比我之前看的详细，尤其是错误归因那部分，适合考前一个月用。</div>
+          <div class="comment-item"><div class="c-user"><i>吴</i>吴同学</div>统计入门清单对零基础比较友好，但希望后面能补一点练习题方向。</div>
+          <div class="comment-item"><div class="c-user"><i>许</i>许一页</div>康奈尔笔记模板下载不了，不过页面里的示例图已经够照着画了。</div>
+          <div class="comment-item"><div class="c-user"><i>何</i>何同学</div>每日更新挺适合早上看一眼，选一条当天的任务，不用自己从零想。</div>
+          <div class="comment-item"><div class="c-user"><i>沈</i>沈自习</div>三个月自学计划那篇的周任务拆法对我有用，之前目标定太大，两周就放弃了。</div>
+          <div class="comment-item"><div class="c-user"><i>罗</i>罗小北</div>相关推荐里的标签写的是具体方法名，比“更多精彩”这种好找多了。</div>
+          <div class="comment-item"><div class="c-user"><i>宋</i>宋同学</div>整体内容偏方法，学科具体知识点不多，适合当学习节奏参考，不适合当教材。</div>
+          <div class="comment-item"><div class="c-user"><i>唐</i>唐一页</div>问答里“自学和跟课哪个更适合自己”回答得比较中肯，没有直接给结论。</div>
+          <div class="comment-item"><div class="c-user"><i>冯</i>冯小满</div>搜索框试了“间隔重复”，能定位到卡片，反馈速度还可以。</div>
+          <div class="comment-item"><div class="c-user"><i>曹</i>曹同学</div>手机上侧栏内容排到主内容后面，读起来不打断，这一点做得不错。</div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="panel" id="news" aria-labelledby="newsTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="newsTitle">学习资讯与进展</h2>
+            <p>近期与学习方法、节奏安排相关的内容动态</p>
+          </div>
+        </div>
+        <ul class="news-list">
+          <li>
+            <span class="n-title">间隔重复与错题重做如何结合</span><span class="n-date">2026-02-10</span>
+            <p class="n-summary">近期讨论集中在复习间隔与错误类型匹配上，建议按概念型与计算型分开安排重做时间。</p>
+          </li>
+          <li>
+            <span class="n-title">短时学习流程受到通勤学习者关注</span><span class="n-date">2026-02-06</span>
+            <p class="n-summary">20—30 分钟的学习流程更适合碎片时间，重点是减少开始前的准备步骤。</p>
+          </li>
+          <li>
+            <span class="n-title">主题阅读的选书顺序讨论增多</span><span class="n-date">2026-01-28</span>
+            <p class="n-summary">从入门到进阶的并读顺序比单本精读更容易保持连续性，适合兴趣拓展场景。</p>
+          </li>
+          <li>
+            <span class="n-title">复盘模板简化趋势明显</span><span class="n-date">2026-01-20</span>
+            <p class="n-summary">三问式复盘模板因为门槛低、耗時短，被更多自学者用于每日收尾。</p>
+          </li>
+          <li>
+            <span class="n-title">自学与跟课的组合方式被更多讨论</span><span class="n-date">2026-01-14</span>
+            <p class="n-summary">按学科难度分配主次，而不是二选一，成为比较型问答中的常见建议。</p>
+          </li>
+          <li>
+            <span class="n-title">学习环境布置类内容关注度上升</span><span class="n-date">2026-01-06</span>
+            <p class="n-summary">光线、桌面分区与手机放置位置被列为减少学习阻力的三个基础项。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="panel" id="related" aria-labelledby="relatedTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="relatedTitle">相关推荐：具体学习方向</h2>
+            <p>按可搜索的具体内容名扩展</p>
+          </div>
+        </div>
+        <div class="rec-tags">
+          <a href="#hot-content">费曼学习法入门</a>
+          <a href="#hot-content">番茄钟与时间块对比</a>
+          <a href="#hot-content">康奈尔笔记法模板</a>
+          <a href="#hot-content">错题本整理步骤</a>
+          <a href="#hot-content">间隔重复复习间隔</a>
+          <a href="#hot-content">三个月自学计划</a>
+          <a href="#hot-content">主题阅读选书顺序</a>
+          <a href="#hot-content">零基础统计入门</a>
+        </div>
+      </section>
+
+      <!-- 11 精选证言 -->
+      <section class="panel" id="quotes" aria-labelledby="quotesTitle">
+        <div class="section-head">
+          <div>
+            <h2 id="quotesTitle">精选证言：学习节奏调整经验</h2>
+            <p>来自不同阶段学习者的简短反馈</p>
+          </div>
+        </div>
+        <div class="quotes">
+          <div class="quote-card">把“每天学三小时”改成“每天一个 25 分钟专注块”，反而连续坚持了四周。<b>—— 备考中的自学者</b></div>
+          <div class="quote-card">错题本只抄题没用，加上错误类型和重做日期之后，才知道自己总卡在同一类题上。<b>—— 理科考生</b></div>
+          <div class="quote-card">通勤时只看一条学习条目，到公司前想好当天要做的第一件事，比刷碎片内容有用。<b>—— 在职学习者</b></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="sidebar-right" aria-label="辅助阅读">
+      <div class="side-block">
+        <p class="side-title">页内目录</p>
+        <ul class="toc-list">
+          <li><a href="#about">内容简介</a></li>
+          <li><a href="#hot-content">热门内容推荐</a></li>
+          <li><a href="#latest-update">每日更新</a></li>
+          <li><a href="#categories">学习方向分类</a></li>
+          <li><a href="#deep-analysis">深度解析</a></li>
+          <li><a href="#guide">入门指南</a></li>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#comments">学习者评论</a></li>
+          <li><a href="#news">学习资讯</a></li>
+          <li><a href="#related">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-block">
+        <p class="side-title">热门条目</p>
+        <ol class="hot-list">
+          <li><a href="#hot-content">费曼学习法四步复述</a></li>
+          <li><a href="#hot-content">番茄钟与时间块对比</a></li>
+          <li><a href="#hot-content">错题本整理步骤</a></li>
+          <li><a href="#hot-content">康奈尔笔记法模板</a></li>
+          <li><a href="#hot-content">间隔重复复习间隔</a></li>
+          <li><a href="#hot-content">三个月自学计划</a></li>
+        </ol>
+      </div>
+      <div class="side-block">
+        <p class="side-title">延伸阅读</p>
+        <ul class="ext-list">
+          <li><a href="#deep-analysis">学习节奏如何安排更稳</a></li>
+          <li><a href="#guide">第一次浏览从哪开始</a></li>
+          <li><a href="#faq">自学和跟课怎么选</a></li>
+          <li><a href="#news">间隔重复与错题重做</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <rect width="100" height="100" rx="22" fill="#f2c94c"/>
+            <path d="M25 62 L50 24 L75 62 Z" fill="#152b3d"/>
+            <circle cx="50" cy="72" r="8" fill="#152b3d"/>
+          </svg>
+          秘密研究所好好学习天天向上
+        </div>
+        <p class="footer-desc">围绕学习方向、每日更新与学习方法的内容门户，帮助学习者把目标拆成可执行的每日任务。</p>
+      </div>
+      <div class="footer-col">
+        <h4>学习频道</h4>
+        <ul>
+          <li><a href="#hot-content">热门内容推荐</a></li>
+          <li><a href="#latest-update">每日更新</a></li>
+          <li><a href="#categories">学习方向分类</a></li>
+          <li><a href="#deep-analysis">深度解析</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>学习方法</h4>
+        <ul>
+          <li><a href="#hot-content">费曼学习法入门</a></li>
+          <li><a href="#hot-content">番茄钟与时间块对比</a></li>
+          <li><a href="#hot-content">康奈尔笔记法模板</a></li>
+          <li><a href="#hot-content">间隔重复复习间隔</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助与问答</h4>
+        <ul>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#guide">入门指南</a></li>
+          <li><a href="#comments">学习者评论</a></li>
+          <li><a href="#news">学习资讯</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 秘密研究所好好学习天天向上 · 内容门户示例</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var searchInput = document.getElementById('siteSearch');
+      var searchBtn = document.getElementById('searchBtn');
+      var feedback = document.getElementById('searchFeedback');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.content-card'));
+      var updates = Array.prototype.slice.call(document.querySelectorAll('.update-list li'));
+      var allItems = cards.concat(updates);
+
+      function normalize(text) {
+        return (text || '').toLowerCase().replace(/\s+/g, '');
+      }
+
+      function runSearch() {
+        var q = normalize(searchInput.value);
+        if (!q) {
+          allItems.forEach(function (el) { el.style.display = ''; });
+          feedback.textContent = '请输入具体的学习条目名称，例如“费曼”“错题本”。';
+          feedback.classList.add('show');
+          return;
+        }
+        var hit = 0;
+        allItems.forEach(function (el) {
+          var text = normalize(el.textContent);
+          var match = text.indexOf(q) !== -1;
+          el.style.display = match ? '' : 'none';
+          if (match) hit++;
+        });
+        if (hit === 0) {
+          feedback.textContent = '没有找到与“' + searchInput.value.trim() + '”匹配的条目，试试更短的关键词或查看学习方向分类。';
+        } else {
+          feedback.textContent = '找到 ' + hit + ' 条与“' + searchInput.value.trim() + '”相关的内容。';
+        }
+        feedback.classList.add('show');
+      }
+
+      searchBtn.addEventListener('click', runSearch);
+      searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          runSearch();
+        }
+      });
+      searchInput.addEventListener('input', function () {
+        if (!searchInput.value.trim()) {
+          allItems.forEach(function (el) { el.style.display = ''; });
+          feedback.classList.remove('show');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.search-wrap')) {
+          feedback.classList.remove('show');
+        }
+      });
+    })();
+  </script>
+</body>
+  </html>
