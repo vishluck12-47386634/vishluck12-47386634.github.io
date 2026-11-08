@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>r星每日大赛寸止挑战-挑战规则玩法_每日参赛时间_难度选择对比</title>
+<meta name="description" content="r星每日大赛寸止挑战是围绕每日主题关卡展开的节奏挑战玩法，本页整理挑战规则、每日参赛时间、难度梯度与通关技巧，适合想稳定参赛、比较不同难度选择的玩家参考。">
+<meta name="keywords" content="每日主题关卡,节奏挑战玩法,难度梯度选择,通关技巧,参赛时间">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314182b'/%3E%3Cpath d='M18 44 L32 16 L46 44' stroke='%23ffb703' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='36' r='4' fill='%23ff5c7a'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0f1320;
+  --bg-soft:#161c2e;
+  --panel:#1b2338;
+  --panel-2:#222c46;
+  --line:#2c3757;
+  --ink:#e9eefb;
+  --ink-2:#b7c2dc;
+  --ink-3:#8794b3;
+  --brand:#ffb703;
+  --brand-2:#ff5c7a;
+  --accent:#4cc9f0;
+  --ok:#5fd68a;
+  --r:14px;
+  --r-sm:9px;
+  --sh:0 8px 24px rgba(0,0,0,.28);
+  --ann-h:38px;
+  --head-h:64px;
+  --off:calc(var(--ann-h) + var(--head-h) + 14px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--off)}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(255,92,122,.12), transparent 60%),
+    radial-gradient(900px 420px at 5% 0%, rgba(76,201,240,.10), transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:800}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:20px}
+li{margin:4px 0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ---------- 吸顶公告条 + 页头 ---------- */
+.sticky-top{position:sticky;top:0;z-index:60}
+.annbar{
+  height:var(--ann-h);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(90deg,#2a1d3f,#3b1f33 45%,#1f2a44);
+  border-bottom:1px solid var(--line);
+  font-size:13px;color:#ffd9e2;
+  padding:0 14px;text-align:center;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+.annbar b{color:var(--brand)}
+.annbar .dot{width:6px;height:6px;border-radius:50%;background:var(--brand-2);flex:0 0 auto}
+
+.sitehead{
+  height:var(--head-h);
+  background:rgba(15,19,32,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.headin{
+  max-width:1360px;margin:0 auto;height:100%;
+  display:flex;align-items:center;gap:18px;padding:0 20px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{display:block}
+.brandtext{font-size:17px;font-weight:900;letter-spacing:.5px}
+.brandtext em{font-style:normal;color:var(--brand)}
+.topnav{display:flex;gap:6px;flex:1 1 auto;overflow:hidden}
+.topnav a{
+  padding:7px 12px;border-radius:999px;font-size:13.5px;color:var(--ink-2);
+  border:1px solid transparent;white-space:nowrap;
+}
+.topnav a:hover{background:var(--panel);color:var(--ink);border-color:var(--line)}
+.headsearch{
+  display:flex;align-items:center;gap:8px;flex:0 0 210px;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 12px;
+}
+.headsearch input{
+  flex:1;min-width:0;background:transparent;border:0;color:var(--ink);font-size:13px;outline:none;
+}
+.headsearch input::placeholder{color:var(--ink-3)}
+.headsearch button{
+  border:0;background:var(--brand);color:#1a1206;font-weight:800;
+  border-radius:999px;padding:5px 12px;font-size:12.5px;
+}
+.headsearch button:hover{filter:brightness(1.06)}
+
+/* ---------- 版心 ---------- */
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr) 250px;
+  gap:22px;
+  align-items:start;
+  padding:24px 0 40px;
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  margin-top:22px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:24px;align-items:stretch;
+  background:linear-gradient(150deg,#1c2440 0%,#171d30 55%,#20182b 100%);
+  border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--sh);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-90px;top:-90px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,183,3,.22),transparent 70%);
+}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+  color:var(--brand);background:rgba(255,183,3,.1);border:1px solid rgba(255,183,3,.32);
+  padding:4px 12px;border-radius:999px;margin-bottom:14px;
+}
+.hero h1{font-size:clamp(26px,3.4vw,40px);letter-spacing:1px;margin-bottom:14px}
+.hero h1 span{color:var(--brand)}
+.hero .lead{color:var(--ink-2);font-size:15px;max-width:56ch;margin-bottom:16px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{
+  font-size:12.5px;padding:4px 11px;border-radius:999px;
+  background:rgba(76,201,240,.1);border:1px solid rgba(76,201,240,.3);color:#bfe9f8;
+}
+.chip.warm{background:rgba(255,92,122,.1);border-color:rgba(255,92,122,.32);color:#ffc9d5}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;
+  font-weight:800;font-size:14px;border:1px solid transparent;
+}
+.btn-p{background:linear-gradient(135deg,var(--brand),#ff8f3c);color:#231703}
+.btn-p:hover{filter:brightness(1.07)}
+.btn-s{background:var(--panel-2);border-color:var(--line);color:var(--ink)}
+.btn-s:hover{background:#2b3757}
+
+/* 首屏视觉：节奏条 */
+.hero-art{
+  position:relative;border-radius:16px;border:1px solid var(--line);
+  background:linear-gradient(180deg,#141a2b,#10141f);
+  padding:16px;display:flex;flex-direction:column;gap:10px;justify-content:center;
+}
+.railrow{display:flex;align-items:center;gap:10px}
+.railrow .lbl{width:52px;flex:0 0 52px;font-size:11.5px;color:var(--ink-3);text-align:right}
+.rail{flex:1;height:14px;border-radius:8px;background:#0c1019;border:1px solid #26304a;overflow:hidden;position:relative}
+.rail i{position:absolute;top:0;bottom:0;border-radius:8px;display:block}
+.rail .fill1{left:0;width:72%;background:linear-gradient(90deg,#4cc9f0,#5fd68a)}
+.rail .fill2{left:8%;width:56%;background:linear-gradient(90deg,#ffb703,#ff8f3c)}
+.rail .fill3{left:16%;width:38%;background:linear-gradient(90deg,#ff5c7a,#c44bff)}
+.rail .fill4{left:24%;width:24%;background:linear-gradient(90deg,#8f9bd4,#5b6a9e)}
+.railnote{font-size:11.5px;color:var(--ink-3);text-align:center;margin-top:4px}
+
+/* ---------- 主栅格 ---------- */
+.grid{display:grid;grid-template-columns:180px minmax(0,1fr) 250px;gap:22px;align-items:start}
+
+/* ---------- 左栏 ---------- */
+.side{position:sticky;top:calc(var(--off));align-self:start}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:14px;margin-bottom:16px;
+}
+.panel h2,.panel .ptitle{
+  font-size:12.5px;letter-spacing:1.2px;color:var(--ink-3);font-weight:800;
+  margin:0 0 10px;text-transform:uppercase;
+}
+.chanlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.chanlist a{
+  display:block;padding:7px 10px;border-radius:8px;font-size:13.5px;color:var(--ink-2);
+  border-left:2px solid transparent;
+}
+.chanlist a:hover{background:var(--panel-2);color:var(--ink);border-left-color:var(--brand)}
+.tagcloud{display:flex;flex-wrap:wrap;gap:6px}
+.tagcloud a,.tagcloud span{
+  font-size:12px;padding:3px 9px;border-radius:999px;background:#232e49;
+  border:1px solid var(--line);color:var(--ink-2);
+}
+.tagcloud a:hover{border-color:var(--accent);color:#d6f3ff}
+
+/* ---------- 中栏 ---------- */
+main{min-width:0}
+.sec{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px;margin-bottom:18px;
+}
+.sec > h2{
+  font-size:20px;margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.sec > h2::before{
+  content:"";width:5px;height:20px;border-radius:3px;
+  background:linear-gradient(180deg,var(--brand),var(--brand-2));flex:0 0 auto;
+}
+.sec .sub{font-size:13px;color:var(--ink-3);margin-bottom:16px}
+.sec h3{font-size:15.5px;margin:18px 0 8px;color:#ffe6ae}
+.sec h3:first-child{margin-top:0}
+
+/* 简介 */
+.intro p{color:var(--ink-2);font-size:14.5px}
+.intro .hl{color:#ffd98a;font-weight:700}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{
+  background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:14px;
+  display:flex;flex-direction:column;gap:8px;transition:transform .15s,border-color .15s;
+}
+.card:hover{transform:translateY(-2px);border-color:#3d4d78}
+.card .ct{font-size:14.5px;font-weight:800;color:#fff}
+.card .type{
+  align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.5px;
+  padding:2px 8px;border-radius:6px;background:rgba(255,183,3,.14);color:var(--brand);border:1px solid rgba(255,183,3,.3);
+}
+.card .type.blue{background:rgba(76,201,240,.13);color:var(--accent);border-color:rgba(76,201,240,.3)}
+.card .type.pink{background:rgba(255,92,122,.13);color:#ffa3b6;border-color:rgba(255,92,122,.3)}
+.card .desc{font-size:13px;color:var(--ink-2);flex:1}
+.card .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:8px}
+.card .tags{display:flex;flex-wrap:wrap;gap:5px}
+.card .tags span{font-size:11px;color:#9fb0d4;background:#1a2338;border:1px solid var(--line);border-radius:5px;padding:1px 7px}
+
+/* 更新列表 */
+.updates{list-style:none;margin:0;padding:0}
+.updates li{
+  display:grid;grid-template-columns:88px 1fr;gap:12px;
+  padding:10px 0;border-bottom:1px dashed var(--line);
+}
+.updates li:last-child{border-bottom:0}
+.updates .when{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.updates .what b{display:block;font-size:14px;color:#fff;margin-bottom:2px}
+.updates .what span{font-size:13px;color:var(--ink-2)}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.cat{
+  display:flex;flex-direction:column;gap:3px;padding:12px;border-radius:10px;
+  background:linear-gradient(160deg,#233052,#1b2338);border:1px solid var(--line);
+}
+.cat:hover{border-color:var(--brand)}
+.cat b{font-size:14px;color:#fff}
+.cat small{font-size:12px;color:var(--ink-3)}
+
+/* 深度正文 */
+.deep p{color:var(--ink-2);font-size:14.5px}
+.deep ul{color:var(--ink-2);font-size:14.5px}
+.deep strong{color:#ffd98a}
+.callout{
+  border-left:3px solid var(--brand);background:rgba(255,183,3,.07);
+  padding:12px 14px;border-radius:0 10px 10px 0;margin:14px 0;color:#f2e4c4;font-size:14px;
+}
+.compare{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.compare th{background:#202a44;color:#ffe6ae;font-size:12.5px}
+.compare td{color:var(--ink-2)}
+
+/* 指南步骤 */
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.steps li{
+  counter-increment:s;position:relative;padding:12px 14px 12px 46px;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:10px;font-size:13.5px;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),#ff8f3c);color:#231703;font-weight:900;font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps b{color:#fff}
+
+/* FAQ */
+details{
+  background:var(--panel-2);border:1px solid var(--line);border-radius:10px;
+  padding:0;margin-bottom:9px;overflow:hidden;
+}
+details summary{
+  list-style:none;padding:12px 40px 12px 14px;font-weight:700;font-size:14px;cursor:pointer;position:relative;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  color:var(--brand);font-size:18px;font-weight:900;line-height:1;
+}
+details[open] summary::after{content:"–"}
+details[open] summary{color:#ffe6ae}
+details .ans{padding:0 14px 13px;font-size:13.5px;color:var(--ink-2)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.cmt{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.cmt .av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#4cc9f0,#5b6a9e);flex:0 0 auto;font-size:11px;font-weight:900;color:#0d1220;display:flex;align-items:center;justify-content:center}
+.cmt .nm{font-size:12.5px;font-weight:700;color:#fff}
+.cmt .tx{font-size:13px;color:var(--ink-2)}
+
+/* 资讯 */
+.news{list-style:none;margin:0;padding:0}
+.news li{padding:11px 0;border-bottom:1px dashed var(--line)}
+.news li:last-child{border-bottom:0}
+.news .nt{font-size:14px;font-weight:700;color:#fff;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.news .dt{font-size:11.5px;color:var(--ink-3);font-weight:400}
+.news p{font-size:13px;color:var(--ink-2);margin:4px 0 0}
+
+/* 相关推荐 */
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:9px}
+.rel a{
+  padding:10px 12px;border-radius:9px;background:var(--panel-2);border:1px solid var(--line);
+  font-size:13.5px;display:flex;flex-direction:column;gap:2px;
+}
+.rel a:hover{border-color:var(--accent)}
+.rel a b{color:#fff;font-size:13.5px}
+.rel a small{color:var(--ink-3);font-size:11.5px}
+
+/* 引语/趋势 */
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.quote{
+  background:linear-gradient(160deg,#252039,#1b2338);border:1px solid #3a3152;border-radius:12px;padding:14px;
+}
+.quote p{font-size:13.5px;color:#f0e3ff;margin-bottom:10px}
+.quote .by{font-size:12px;color:var(--ink-3)}
+
+/* ---------- 右栏 ---------- */
+.toc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.toc a{display:block;font-size:13px;color:var(--ink-2);padding:5px 8px;border-radius:6px;border-left:2px solid transparent}
+.toc a:hover{background:var(--panel-2);color:#fff;border-left-color:var(--accent)}
+.hot{list-style:none;margin:0;padding:0;counter-reset:h}
+.hot li{counter-increment:h;display:flex;gap:9px;padding:7px 0;font-size:13px;border-bottom:1px dashed var(--line)}
+.hot li:last-child{border-bottom:0}
+.hot li::before{
+  content:counter(h);flex:0 0 18px;height:18px;border-radius:5px;background:#28334f;color:var(--ink-2);
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:3px;
+}
+.hot li:nth-child(1)::before{background:linear-gradient(135deg,var(--brand),#ff8f3c);color:#231703}
+.hot li:nth-child(2)::before{background:linear-gradient(135deg,#ff5c7a,#c44bff);color:#fff}
+.hot li a{color:var(--ink-2)}
+.hot li a:hover{color:#fff}
+.hot small{display:block;color:var(--ink-3);font-size:11.5px}
+
+/* ---------- 页尾 ---------- */
+footer{border-top:1px solid var(--line);background:#0c101a;padding:30px 0 22px;margin-top:10px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:22px}
+.fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fbrand b{font-size:16px}
+footer p{font-size:13px;color:var(--ink-3);margin:0 0 8px}
+.fcol h4{font-size:12.5px;color:var(--ink-2);letter-spacing:1px;margin-bottom:9px}
+.fcol a{display:block;font-size:13px;color:var(--ink-3);padding:3px 0}
+.fcol a:hover{color:var(--brand)}
+.copy{
+  max-width:1360px;margin:22px auto 0;padding:14px 20px 0;border-top:1px solid var(--line);
+  font-size:12px;color:#6d7a99;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;
+}
+
+/* 搜索结果反馈 */
+.noresult{
+  display:none;margin-top:12px;padding:12px 14px;border-radius:10px;
+  background:rgba(255,92,122,.09);border:1px solid rgba(255,92,122,.3);color:#ffc9d5;font-size:13.5px;
+}
+.noresult.on{display:block}
+.hit{outline:2px solid var(--brand);outline-offset:2px;border-radius:10px}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1180px){
+  .layout,.grid{grid-template-columns:180px minmax(0,1fr)}
+  .side.right{display:none}
+  .hero{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .layout,.grid{grid-template-columns:1fr}
+  .side.left{position:static;order:2}
+  .side.left .panel{display:inline-block;vertical-align:top;width:100%}
+  .side.left .chanlist{flex-direction:row;flex-wrap:wrap}
+  .side.left .chanlist a{border-left:0;border:1px solid var(--line)}
+  main{order:1}
+  .topnav{display:none}
+  .headsearch{flex:1 1 auto;min-width:0}
+  .hero{padding:22px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .annbar{font-size:11.5px}
+  .brandtext{font-size:14px}
+  .headin{gap:10px;padding:0 12px}
+  .wrap{padding:0 12px}
+  .hero{padding:18px;border-radius:16px}
+  .sec{padding:16px}
+  .updates li{grid-template-columns:1fr;gap:2px}
+  .cards{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .rel{grid-template-columns:1fr}
+  .headsearch button{padding:5px 9px;font-size:11.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="annbar" role="note">
+    <span class="dot" aria-hidden="true"></span>
+    <span>今日关卡已更新 · <b>第 7 期「三段折返」</b> 开放时间 20:00—23:30，限时完成可解锁隐藏评分</span>
+  </div>
+  <header class="sitehead">
+    <div class="headin">
+      <a class="brand" href="/#top" aria-label="r星每日大赛寸止挑战 首页">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#161c2e" stroke="#2c3757"/>
+          <path d="M17 45 L32 15 L47 45" stroke="#ffb703" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="37" r="4.5" fill="#ff5c7a"/>
+          <path d="M24 51 h16" stroke="#4cc9f0" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brandtext">r星每日大赛<em>寸止挑战</em></span>
+      </a>
+      <nav class="topnav" aria-label="频道导航">
+        <a href="/#intro">挑战简介</a>
+        <a href="/#hot">今日关卡</a>
+        <a href="/#update">更新节奏</a>
+        <a href="/#cats">难度分类</a>
+        <a href="/#deep">规则解析</a>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">赛事资讯</a>
+      </nav>
+      <form class="headsearch" id="searchForm" role="search">
+        <label for="q" class="sr-only" style="position:absolute;left:-9999px">搜索本页内容</label>
+        <input id="q" type="search" placeholder="搜索关卡 / 难度 / 技巧" autocomplete="off">
+        <button type="submit">查找</button>
+      </form>
+    </div>
+  </header>
+</div>
+
+<div class="wrap" id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div>
+      <span class="kicker">每日主题关卡 · 节奏挑战</span>
+      <h1 id="heroTitle">r星每日大赛寸止挑战</h1>
+      <p class="lead">
+        每天一期主题关卡，按节拍在指定节点停手、折返、再续接。这里整理挑战规则、每日参赛时间窗口、四档难度梯度与稳定通关的节奏技巧，帮助你在有限次数内把评分打稳。
+      </p>
+      <div class="facts">
+        <span class="chip">每日 20:00 开赛</span>
+        <span class="chip warm">四档难度可选</span>
+        <span class="chip">单期 3—8 分钟</span>
+        <span class="chip">支持回看复盘</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-p" href="/#hot">查看今日关卡</a>
+        <a class="btn btn-s" href="/#deep">先读规则解析</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="railrow"><span class="lbl">标准档</span><div class="rail"><i class="fill1"></i></div></div>
+      <div class="railrow"><span class="lbl">进阶档</span><div class="rail"><i class="fill2"></i></div></div>
+      <div class="railrow"><span class="lbl">挑战档</span><div class="rail"><i class="fill3"></i></div></div>
+      <div class="railrow"><span class="lbl">极限档</span><div class="rail"><i class="fill4"></i></div></div>
+      <div class="railnote">难度越高，允许的节拍容差越窄</div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <!-- 左栏 -->
+    <aside class="side left" aria-label="频道与标签索引">
+      <div class="panel">
+        <div class="ptitle">频道索引</div>
+        <ul class="chanlist">
+          <li><a href="/#intro">挑战简介</a></li>
+          <li><a href="/#hot">今日关卡</a></li>
+          <li><a href="/#update">更新节奏</a></li>
+          <li><a href="/#cats">难度分类</a></li>
+          <li><a href="/#deep">规则解析</a></li>
+          <li><a href="/#guide">参赛指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">玩家评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#rel">相关推荐</a></li>
+          <li><a href="/#pick">精选与趋势</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ptitle">标签索引</div>
+        <div class="tagcloud">
+          <a href="/#cats">三段折返</a>
+          <a href="/#cats">节拍容差</a>
+          <a href="/#cats">单点停留</a>
+          <a href="/#cats">连段续接</a>
+          <a href="/#cats">盲拍模式</a>
+          <a href="/#guide">睡前练习</a>
+          <a href="/#guide">通勤复盘</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main>
+
+      <!-- 1 简介 -->
+      <section class="sec intro" id="intro" aria-labelledby="h-intro">
+        <h2 id="h-intro">挑战简介：每日一期，按节拍停手</h2>
+        <p class="sub">了解这套挑战在做什么、为什么每天都不一样</p>
+        <p><span class="hl">r星每日大赛寸止挑战</span>是一套以“节拍停手”为核心的每日关卡玩法：每期给出固定主题与节奏谱面，参赛者要在规定的节点准确停手、保持静止，再按提示续接下一段，最终由停手精度、连段完整度和用时共同决定评分。</p>
+        <p>它和常见的节奏类玩法最大的区别在于，重点不在“打得快”，而在“停得准”。谱面中会安排若干停手点，每个停手点对应一个容差区间，停早了扣精度，停晚了丢连段。因此稳定通关的关键，是对节拍密度和段落长度的预判，而不是单纯的手速。</p>
+        <p>每日关卡的形态会在几类主题间轮换：三段折返型要求在一次挑战中完成三次方向切换；单点停留型把难度集中在少数几个长停留节点；连段续接型则把多个短停手点压缩在连续八拍内。不同的主题对应不同的练习侧重，也是玩家比较“哪类关卡更适合自己”的主要依据。</p>
+        <p>关卡按难度分为标准、进阶、挑战、极限四档。标准档容差宽、停手点少，适合第一次接触的玩家熟悉节奏；进阶档开始加入盲拍提示，需要靠内心计数对齐；挑战档与极限档的停手点更密，且部分节点不显示倒计时刻度。多数玩家会先在进阶档把单期评分打稳，再考虑上探。</p>
+        <p>每日参赛时间集中在晚间，单期时长普遍在 3—8 分钟之间，适合睡前练习一轮，也适合通勤时段做复盘回看。每期结束后可以调出停手记录，逐点对照偏差值，这也是提升最快的一步。</p>
+      </section>
+
+      <!-- 2 热门关卡推荐 -->
+      <section class="sec" id="hot" aria-labelledby="h-hot">
+        <h2 id="h-hot">今日关卡与近期热门曲目</h2>
+        <p class="sub">按主题与难度挑一期开始，卡片内为示例评分与热度</p>
+        <div class="cards">
+          <article class="card">
+            <span class="type">三段折返</span>
+            <div class="ct">第 7 期「三段折返·夜行」</div>
+            <p class="desc">三次方向切换分别落在第 16、32、48 拍，第二段停留最长，容易出现提前松手。</p>
+            <div class="tags"><span>停手精度</span><span>方向切换</span><span>进阶档</span></div>
+            <div class="meta"><span>热度 9820</span><span>平均分 86.4</span></div>
+          </article>
+          <article class="card">
+            <span class="type blue">单点停留</span>
+            <div class="ct">第 5 期「长停·静默八拍」</div>
+            <p class="desc">全程只有两个停手点，但每次需静止满八拍，考验呼吸与身体稳定度。</p>
+            <div class="tags"><span>长停留</span><span>盲拍提示</span><span>挑战档</span></div>
+            <div class="meta"><span>热度 8640</span><span>平均分 79.1</span></div>
+          </article>
+          <article class="card">
+            <span class="type pink">连段续接</span>
+            <div class="ct">第 3 期「碎拍连停」</div>
+            <p class="desc">连续六个短停手点压缩在八拍内，容差仅 ±40 毫秒，是进阶档的分水岭。</p>
+            <div class="tags"><span>短停手</span><span>连段完整度</span><span>进阶档</span></div>
+            <div class="meta"><span>热度 7930</span><span>平均分 74.6</span></div>
+          </article>
+          <article class="card">
+            <span class="type">三段折返</span>
+            <div class="ct">第 2 期「折返·晨光」</div>
+            <p class="desc">入门友好的一期，折返点间隔均匀，适合练习基础内心计数。</p>
+            <div class="tags"><span>标准档</span><span>内心计数</span><span>新手友好</span></div>
+            <div class="meta"><span>热度 7210</span><span>平均分 90.2</span></div>
+          </article>
+          <article class="card">
+            <span class="type blue">盲拍模式</span>
+            <div class="ct">第 6 期「无刻度·暗拍」</div>
+            <p class="desc">全程隐藏倒计时刻度，只能依靠节拍器音色判断，误差容忍度极低。</p>
+            <div class="tags"><span>盲拍模式</span><span>节拍容差</span><span>极限档</span></div>
+            <div class="meta"><span>热度 6890</span><span>平均分 68.3</span></div>
+          </article>
+          <article class="card">
+            <span class="type pink">变拍</span>
+            <div class="ct">第 4 期「变速·双轨」</div>
+            <p class="desc">中途节拍速度提升一档，需要重新校准计数，适合已稳定进阶档的玩家。</p>
+            <div class="tags"><span>变速</span><span>重新校准</span><span>挑战档</span></div>
+            <div class="meta"><span>热度 6520</span><span>平均分 71.8</span></div>
+          </article>
+          <article class="card">
+            <span class="type">单点停留</span>
+            <div class="ct">第 1 期「初停·四拍」</div>
+            <p class="desc">最早的入门期，四个停手点均匀分布，用来建立停手手感的基准线。</p>
+            <div class="tags"><span>标准档</span><span>手感基准</span><span>新手友好</span></div>
+            <div class="meta"><span>热度 6100</span><span>平均分 91.5</span></div>
+          </article>
+          <article class="card">
+            <span class="type blue">连段续接</span>
+            <div class="ct">第 8 期「续接·回环」</div>
+            <p class="desc">停手点呈环形排列，末段会回到起点节拍，考验收尾稳定度。</p>
+            <div class="tags"><span>收尾稳定</span><span>连段完整度</span><span>挑战档</span></div>
+            <div class="meta"><span>热度 5980</span><span>平均分 76.9</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="sec" id="update" aria-labelledby="h-update">
+        <h2 id="h-update">最新更新与赛程动态</h2>
+        <p class="sub">每日关卡开放、谱面调整与评分口径变化</p>
+        <ul class="updates">
+          <li><span class="when">今天 20:00</span><span class="what"><b>第 7 期「三段折返·夜行」开放</b><span>进阶档新增第二段盲拍提示，挑战档停手点由 4 个增至 6 个。</span></span></li>
+          <li><span class="when">昨天</span><span class="what"><b>停手记录面板支持逐点回放</b><span>可查看每个停手点的偏差毫秒数与连段断裂位置，方便复盘。</span></span></li>
+          <li><span class="when">2 天前</span><span class="what"><b>极限档容差调整</b><span>由 ±30 毫秒收紧至 ±25 毫秒，已通关记录不受影响。</span></span></li>
+          <li><span class="when">3 天前</span><span class="what"><b>第 6 期「无刻度·暗拍」结算</b><span>本期平均分 68.3，为近五期最低，盲拍模式难度反馈集中。</span></span></li>
+          <li><span class="when">4 天前</span><span class="what"><b>新增「睡前练习」模式</b><span>将单期压缩至 3 分钟以内，保留全部停手点，适合短时练习。</span></span></li>
+          <li><span class="when">5 天前</span><span class="what"><b>第 5 期「长停·静默八拍」结算</b><span>长停留型关卡的平均连段完整度首次超过 80%。</span></span></li>
+          <li><span class="when">6 天前</span><span class="what"><b>节拍器音色可选</b><span>新增木质、电子、低频三种音色，盲拍模式可自选提示音。</span></span></li>
+          <li><span class="when">7 天前</span><span class="what"><b>第 4 期「变速·双轨」复盘开放</b><span>变速段的重新校准点已标注在回放时间轴上。</span></span></li>
+          <li><span class="when">8 天前</span><span class="what"><b>难度梯度说明页更新</b><span>补充四档难度的容差区间与推荐练习顺序。</span></span></li>
+          <li><span class="when">9 天前</span><span class="what"><b>第 3 期「碎拍连停」结算</b><span>连续短停手段落成为本期主要失分点。</span></span></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="sec" id="cats" aria-labelledby="h-cats">
+        <h2 id="h-cats">难度与主题分类入口</h2>
+        <p class="sub">按关卡形态或难度档位定位，选择适合自己当前水平的入口</p>
+        <div class="cats">
+          <a class="cat" href="/#hot"><b>三段折返型</b><small>多次方向切换，考验预判</small></a>
+          <a class="cat" href="/#hot"><b>单点停留型</b><small>少点位长停留，考验稳定</small></a>
+          <a class="cat" href="/#hot"><b>连段续接型</b><small>密停手点，考验连段完整</small></a>
+          <a class="cat" href="/#hot"><b>盲拍模式</b><small>隐藏刻度，靠内心计数</small></a>
+          <a class="cat" href="/#guide"><b>标准档入门</b><small>容差宽，适合首次参赛</small></a>
+          <a class="cat" href="/#guide"><b>进阶档稳定</b><small>加入盲拍，评分分水岭</small></a>
+          <a class="cat" href="/#guide"><b>挑战档上探</b><small>停手点加密，需节奏预判</small></a>
+          <a class="cat" href="/#guide"><b>极限档对比</b><small>容差最窄，适合冲高分</small></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="sec deep" id="deep" aria-labelledby="h-deep">
+        <h2 id="h-deep">规则解析：停手精度、连段与评分口径</h2>
+        <p class="sub">从三个维度拆解评分逻辑，理解为什么“停得准”比“打得快”更重要</p>
+
+        <h3>停手精度的判定方式</h3>
+        <p>每个停手点都有一个目标时刻，实际停手时刻与目标时刻的差值即为偏差值。偏差落在容差区间内记为有效停手，超出则记为失误。四档难度的容差区间不同，标准档约为 ±80 毫秒，进阶档 ±60 毫秒，挑战档 ±40 毫秒，极限档 ±25 毫秒。容差越窄，对内心计数的稳定度要求越高。</p>
+        <p>偏差值还分方向：提前停手通常只扣精度分，延迟停手则可能同时打断连段。因此在接近容差边界时，宁可略早，不要略晚，这是多数玩家在 r星每日大赛寸止挑战 中总结出的稳定策略。</p>
+
+        <h3>连段完整度如何计算</h3>
+        <p>连段完整度按“连续有效停手”的最长序列计算，中途一次失误即中断。它和停手精度是两个独立维度：精度看单点，连段看整体。有些玩家单点精度很高，但偶发一次失误就让连段清零，总分反而不如稳定型选手。</p>
+        <ul>
+          <li>连续有效停手 3 个以上开始计入连段加成。</li>
+          <li>连段中断后重新累计，历史最长序列仍然保留在结算中。</li>
+          <li>盲拍模式下连段权重略高，因为无刻度时保持连续更难。</li>
+        </ul>
+
+        <h3>用时与评分的关系</h3>
+        <p>用时不是越快越好。评分中的用时项衡量的是“在容差内完成全部停手点的总耗时”，过快往往意味着提前松手，过慢则可能错过下一段起拍。合理的做法是把每段用时控制在谱面标注的参考区间内，而不是一味压缩。</p>
+        <div class="callout">
+          一个常被忽略的细节：长停留段的评分看的是“静止期间的稳定性”，轻微的节拍漂移会被记录为漂移值。呼吸节奏不稳时，漂移值会明显上升。
+        </div>
+
+        <h3>四档难度对比</h3>
+        <table class="compare">
+          <thead>
+            <tr><th>难度档位</th><th>停手容差</th><th>停手点数量</th><th>适合人群</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>标准档</td><td>±80 毫秒</td><td>3—4 个</td><td>首次参赛、熟悉节拍结构</td></tr>
+            <tr><td>进阶档</td><td>±60 毫秒</td><td>4—6 个</td><td>已能稳定完成标准档，开始练盲拍</td></tr>
+            <tr><td>挑战档</td><td>±40 毫秒</td><td>6—8 个</td><td>追求连段完整度与高分</td></tr>
+            <tr><td>极限档</td><td>±25 毫秒</td><td>8 个以上</td><td>已稳定挑战档、冲击极限评分</td></tr>
+          </tbody>
+        </table>
+        <p>选择档位时不必一步到位。比较稳妥的路径是：在标准档把四类主题各打一遍，确认自己更适应“折返预判”还是“长停留稳定”，再决定主攻方向。适应折返型的人通常在挑战档更容易出成绩，适应长停留的人则在单点停留型关卡里优势明显。</p>
+        <p>另一个值得比较的维度是盲拍与非盲拍。盲拍模式隐藏刻度，评分对连段更敏感；非盲拍模式有倒计时提示，单点精度更容易做高。两种模式的练习价值不同，前者练内心计数，后者练边界控制，交替练习的效果通常好于只练一种。</p>
+        <p>最后是复盘。停手记录面板会标出每个停手点的偏差方向与数值，把偏差集中在同一方向的点圈出来，基本就能定位问题：系统性偏早说明起拍预判过快，系统性偏晚说明内心计数拖拍。针对性地放慢或加快计数，比反复刷同一期更有效。</p>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="sec" id="guide" aria-labelledby="h-guide">
+        <h2 id="h-guide">参赛指南：从入门到稳定出分</h2>
+        <p class="sub">按顺序完成这几步，基本可以避开大多数新手的失分点</p>
+        <ol class="steps">
+          <li><b>先看谱面结构再开打。</b>每期开始前会给出主题、停手点数量与节拍密度，先判断属于折返型还是停留型，能减少第一次尝试的盲目失误。</li>
+          <li><b>用标准档建立基准线。</b>标准档容差宽，重点是把每个停手点的位置记住，形成身体记忆，而不是追求当次高分。</li>
+          <li><b>进阶档练内心计数。</b>进阶档开始出现盲拍提示，试着在无刻度情况下默数节拍，把误差控制在 ±60 毫秒以内。</li>
+          <li><b>睡前练习压缩时长。</b>单期压缩到 3 分钟以内，适合每天固定练一轮，保持手感而不至于疲劳。</li>
+          <li><b>通勤时段做复盘。</b>回看停手记录，重点看偏差方向是否集中，而不是只看总分。</li>
+          <li><b>比较档位再上探。</b>挑战档与极限档的容差差异明显，先在挑战档稳定三期的连段完整度，再考虑极限档。</li>
+          <li><b>交替练习盲拍与非盲拍。</b>前者练计数稳定，后者练边界控制，交替进行比单一模式提升更快。</li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="sec" id="faq" aria-labelledby="h-faq">
+        <h2 id="h-faq">常见问答</h2>
+        <p class="sub">围绕参赛时间、难度选择与评分口径的高频问题</p>
+
+        <details>
+          <summary>r星每日大赛寸止挑战一般几点开放，错过还能补吗？</summary>
+          <div class="ans">每日关卡通常在 20:00 开放，窗口持续到 23:30 左右。窗口关闭后仍可进入练习模式，但当期评分不再计入当日结算。补赛一般安排在周末的回顾期，具体以当期公告为准。</div>
+        </details>
+
+        <details>
+          <summary>第一次参加应该选哪个难度档？</summary>
+          <div class="ans">建议从标准档开始。标准档容差约 ±80 毫秒，停手点只有 3—4 个，重点是把停手位置记住。连续两期标准档能稳定完成全部停手点后，再考虑进阶档。</div>
+        </details>
+
+        <details>
+          <summary>三段折返型和单点停留型，哪种更适合新手？</summary>
+          <div class="ans">单点停留型通常更友好。它的停手点少、间隔长，对内心计数的要求集中在少数几个节点上；三段折返型需要在一次挑战中完成多次方向切换，预判压力更大，更适合已经熟悉节拍结构的玩家。</div>
+        </details>
+
+        <details>
+          <summary>盲拍模式和普通模式比，评分差在哪里？</summary>
+          <div class="ans">盲拍模式隐藏倒计时刻度，只能靠节拍器音色判断停手时机。单点精度通常比普通模式低，但连段权重略高，因为无刻度下保持连续更难。两种模式的练习价值不同，建议交替进行。</div>
+        </details>
+
+        <details>
+          <summary>停手总是偏早，有什么调整办法？</summary>
+          <div class="ans">系统性偏早通常说明起拍预判过快。可以试着在每段起拍后刻意多等半拍再计数，或者把节拍器音色调成低频，让每个拍点更清晰。复盘时把偏差集中的停手点单独标出，针对这几段放慢计数节奏。</div>
+        </details>
+
+        <details>
+          <summary>连段完整度和停手精度，哪个对总分影响更大？</summary>
+          <div class="ans">两者权重接近，但作用不同。停手精度看单点表现，连段完整度看整体稳定。挑战档以上，连段权重会略微上升，因为密集停手点下保持连续更难。多数情况下，先保连段、再追精度，总分更稳。</div>
+        </details>
+      </section>
+
+      <!-- 8 评论 -->
+      <section class="sec" id="comments" aria-labelledby="h-comments">
+        <h2 id="h-comments">玩家评论</h2>
+        <p class="sub">来自参赛者的真实风格反馈，含中性评价</p>
+        <div class="comments">
+          <div class="cmt"><div class="who"><span class="av">夜</span><span class="nm">夜行折返</span></div><p class="tx">第 7 期第二段停留太长了，第三次才稳住，呼吸一乱漂移值就上去了。</p></div>
+          <div class="cmt"><div class="who"><span class="av">慢</span><span class="nm">慢拍选手</span></div><p class="tx">单点停留型真的适合我，折返型那几期平均分一直上不去。</p></div>
+          <div class="cmt"><div class="who"><span class="av">八</span><span class="nm">八拍计</span></div><p class="tx">盲拍模式练了两周，内心计数明显稳了，普通模式反而觉得提示太多。</p></div>
+          <div class="cmt"><div class="who"><span class="av">碎</span><span class="nm">碎拍党</span></div><p class="tx">碎拍连停那期容差 ±40 毫秒，六连停我只成了四个，连段直接断。</p></div>
+          <div class="cmt"><div class="who"><span class="av">通</span><span class="nm">通勤复盘</span></div><p class="tx">每天地铁上看五分钟停手记录，比晚上多刷两轮还有用。</p></div>
+          <div class="cmt"><div class="who"><span class="av">木</span><span class="nm">木质节拍</span></div><p class="tx">换成木质音色之后，盲拍模式的判断清楚不少，电子音有点糊。</p></div>
+          <div class="cmt"><div class="who"><span class="av">临</span><span class="nm">临界值</span></div><p class="tx">极限档 ±25 毫秒，我打了六次才过一次，容差是真的窄。</p></div>
+          <div class="cmt"><div class="who"><span class="av">前</span><span class="nm">提前半拍</span></div><p class="tx">一直偏早，按建议刻意多等半拍，第三期终于把偏差方向拉回来了。</p></div>
+          <div class="cmt"><div class="who"><span class="av">平</span><span class="nm">平常心</span></div><p class="tx">不追高分，每天睡前练一轮标准档，手感保持得挺好。</p></div>
+          <div class="cmt"><div class="who"><span class="av">变</span><span class="nm">变速段</span></div><p class="tx">变速双轨那期中途提速，我重新校准慢了两拍，后面全乱。</p></div>
+          <div class="cmt"><div class="who"><span class="av">比</span><span class="nm">比较控</span></div><p class="tx">挑战档和极限档都试过，说实话差别没有想象中大，主要是心态。</p></div>
+          <div class="cmt"><div class="who"><span class="av">回</span><span class="nm">回环收尾</span></div><p class="tx">第 8 期末段回到起点节拍，收尾那一下我老是提前松手。</p></div>
+          <div class="cmt"><div class="who"><span class="av">稳</span><span class="nm">稳定优先</span></div><p class="tx">先保连段再追精度这个思路确实有效，总分涨得比硬磕单点快。</p></div>
+          <div class="cmt"><div class="who"><span class="av">新</span><span class="nm">新手小周</span></div><p class="tx">第一次玩标准档，四个停手点成了三个，节奏比想象中难掌握。</p></div>
+          <div class="cmt"><div class="who"><span class="av">低</span><span class="nm">低频提示</span></div><p class="tx">低频音色在长停留段特别有用，尾巴听得清，不会误判。</p></div>
+          <div class="cmt"><div class="who"><span class="av">中</span><span class="nm">中性发言</span></div><p class="tx">玩法挺有意思，但每天只有一期，想多练只能反复刷同一期。</p></div>
+        </div>
+      </section>
+
+      <!-- 9 资讯 -->
+      <section class="sec" id="news" aria-labelledby="h-news">
+        <h2 id="h-news">赛事资讯</h2>
+        <p class="sub">近期与挑战相关的规则调整与数据观察</p>
+        <ul class="news">
+          <li>
+            <div class="nt">极限档容差收紧后，首周通关率下降约两成 <span class="dt">昨天</span></div>
+            <p>容差由 ±30 毫秒调整至 ±25 毫秒，首周数据显示极限档通关率明显下滑，但连段完整度的分化也更清晰。</p>
+          </li>
+          <li>
+            <div class="nt">停手记录面板加入逐点回放，复盘效率提升 <span class="dt">2 天前</span></div>
+            <p>新面板可按停手点查看偏差方向与数值，并定位连段断裂位置，被多数玩家认为是近期最实用的改动。</p>
+          </li>
+          <li>
+            <div class="nt">盲拍模式难度反馈集中，连段权重或再调整 <span class="dt">3 天前</span></div>
+            <p>第 6 期结算平均分为近五期最低，反馈主要集中在无刻度下的连段判定，后续可能对连段权重做微调。</p>
+          </li>
+          <li>
+            <div class="nt">「睡前练习」模式上线，单期压缩至三分钟内 <span class="dt">4 天前</span></div>
+            <p>该模式保留全部停手点，仅压缩间隔与铺垫段落，适合固定时段做短时手感练习。</p>
+          </li>
+          <li>
+            <div class="nt">节拍器新增三种音色，盲拍判断更依赖听感 <span class="dt">6 天前</span></div>
+            <p>木质、电子、低频三种音色在长停留段的辨识度差异明显，低频音色被认为更适合长停留型关卡。</p>
+          </li>
+          <li>
+            <div class="nt">变速关卡重新校准点标注上线 <span class="dt">7 天前</span></div>
+            <p>变速双轨型关卡的提速位置已标注在回放时间轴上，方便玩家对照节拍变化调整计数节奏。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="sec" id="rel" aria-labelledby="h-rel">
+        <h2 id="h-rel">相关推荐</h2>
+        <p class="sub">按练习方向延伸，与热门关卡的角度互补</p>
+        <div class="rel">
+          <a href="/#deep"><b>停手容差四档对照</b><small>看清各难度差多少毫秒</small></a>
+          <a href="/#guide"><b>盲拍模式内心计数练法</b><small>从默数到稳定停手</small></a>
+          <a href="/#hot"><b>长停留段的呼吸控制</b><small>减少静止期漂移值</small></a>
+          <a href="/#deep"><b>连段完整度与精度取舍</b><small>两种评分维度的比较</small></a>
+          <a href="/#update"><b>每日关卡开放时间窗口</b><small>晚间参赛与补赛说明</small></a>
+          <a href="/#guide"><b>变速段的重新校准</b><small>提速后如何找回节拍</small></a>
+          <a href="/#hot"><b>三段折返的预判技巧</b><small>方向切换前的准备</small></a>
+        </div>
+      </section>
+
+      <!-- 11 精选与趋势 -->
+      <section class="sec" id="pick" aria-labelledby="h-pick">
+        <h2 id="h-pick">精选观点与趋势观察</h2>
+        <p class="sub">参赛者的经验总结与近期玩法走向</p>
+        <div class="quotes">
+          <div class="quote">
+            <p>“停手类玩法最反直觉的一点是，越紧张越想快，越快越偏早。放松反而准。”</p>
+            <div class="by">—— 连段稳定型参赛者</div>
+          </div>
+          <div class="quote">
+            <p>“盲拍不是不看，是没有可看。把节拍器当成唯一的锚点，计数才不会漂。”</p>
+            <div class="by">—— 盲拍模式常驻玩家</div>
+          </div>
+          <div class="quote">
+            <p>“难度档位不是越高越好，选对形态比硬上极限档更容易出成绩。”</p>
+            <div class="by">—— 挑战档稳定选手</div>
+          </div>
+        </div>
+        <h3>近期趋势</h3>
+        <ul>
+          <li>长停留型关卡的参赛人数稳步上升，与短时练习模式的推出时间基本吻合。</li>
+          <li>盲拍模式的讨论热度集中在连段判定，而非单点精度。</li>
+          <li>变速关卡因需要重新校准，成为进阶档到挑战档之间的主要分水岭。</li>
+          <li>复盘行为的普及度提高，逐点回放的使用率明显高于只看总分。</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="side right" aria-label="辅助阅读">
+      <div class="panel">
+        <div class="ptitle">本页目录</div>
+        <ul class="toc">
+          <li><a href="/#intro">挑战简介</a></li>
+          <li><a href="/#hot">今日关卡与热门曲目</a></li>
+          <li><a href="/#update">最新更新与赛程</a></li>
+          <li><a href="/#cats">难度与主题分类</a></li>
+          <li><a href="/#deep">规则解析</a></li>
+          <li><a href="/#guide">参赛指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">玩家评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#rel">相关推荐</a></li>
+          <li><a href="/#pick">精选与趋势</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ptitle">热门条目</div>
+        <ul class="hot">
+          <li><a href="/#hot">第 7 期「三段折返·夜行」<small>今日开放 · 进阶档</small></a></li>
+          <li><a href="/#hot">第 5 期「长停·静默八拍」<small>长停留 · 挑战档</small></a></li>
+          <li><a href="/#hot">第 3 期「碎拍连停」<small>六连停 · 进阶档</small></a></li>
+          <li><a href="/#hot">第 6 期「无刻度·暗拍」<small>盲拍 · 极限档</small></a></li>
+          <li><a href="/#hot">第 4 期「变速·双轨」<small>变速 · 挑战档</small></a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="ptitle">延伸阅读</div>
+        <ul class="toc">
+          <li><a href="/#deep">停手容差与评分口径</a></li>
+          <li><a href="/#guide">从标准档到挑战档的路径</a></li>
+          <li><a href="/#faq">偏早停手的调整办法</a></li>
+          <li><a href="/#news">极限档容差调整观察</a></li>
+        </ul>
+      </div>
+      <div class="noresult" id="noresult" role="status" aria-live="polite">
+        没有找到匹配的内容，换个关键词试试，例如“三段折返”“盲拍”“容差”。
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#161c2e" stroke="#2c3757"/>
+            <path d="M17 45 L32 15 L47 45" stroke="#ffb703" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="32" cy="37" r="4.5" fill="#ff5c7a"/>
+          </svg>
+          <b>r星每日大赛寸止挑战</b>
+        </div>
+        <p>每日一期主题关卡，围绕节拍停手、连段续接与难度梯度展开的节奏挑战门户。</p>
+        <p>整理挑战规则、参赛时间、难度对比与复盘方法，服务稳定参赛的玩家。</p>
+      </div>
+      <div class="fcol">
+        <h4>关卡频道</h4>
+        <a href="/#hot">今日关卡</a>
+        <a href="/#update">更新节奏</a>
+        <a href="/#cats">难度分类</a>
+        <a href="/#news">赛事资讯</a>
+      </div>
+      <div class="fcol">
+        <h4>规则与技巧</h4>
+        <a href="/#deep">规则解析</a>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#rel">相关推荐</a>
+      </div>
+      <div class="fcol">
+        <h4>社区与观察</h4>
+        <a href="/#comments">玩家评论</a>
+        <a href="/#pick">精选与趋势</a>
+        <a href="/#intro">挑战简介</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2025 r星每日大赛寸止挑战 · 内容为示例编排，仅供页面结构展示</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var nores = document.getElementById('noresult');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main .sec'));
+
+  function clearHits(){
+    sections.forEach(function(s){ s.classList.remove('hit'); });
+    nores.classList.remove('on');
+  }
+
+  function runSearch(){
+    var kw = (input.value || '').trim().toLowerCase();
+    clearHits();
+    if(!kw){ return; }
+    var found = [];
+    sections.forEach(function(sec){
+      if(sec.textContent.toLowerCase().indexOf(kw) > -1){
+        found.push(sec);
+      }
+    });
+    if(found.length === 0){
+      nores.classList.add('on');
+      return;
+    }
+    found.forEach(function(s){ s.classList.add('hit'); });
+    var first = found[0];
+    var top = first.getBoundingClientRect().top + window.pageYOffset - 130;
+    window.scrollTo({top: top, behavior:'smooth'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    runSearch();
+  });
+
+  input.addEventListener('input', function(){
+    if(!input.value.trim()){ clearHits(); }
+  });
+})();
+</script>
+</body>
+                                              </html>
