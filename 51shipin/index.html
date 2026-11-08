@@ -1,0 +1,1778 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>51视频学院-短视频剪辑课程_零基础拍摄教程_手机剪辑培训</title>
+  <meta name="description" content="51视频学院提供短视频剪辑课程、零基础拍摄教程和手机剪辑培训。这里汇集了从入门到进阶的实操内容，适合想系统学习视频制作的初学者和自媒体人参考。">
+  <meta name="keywords" content="短视频剪辑课程,手机剪辑培训,零基础拍摄教程,视频制作入门,自媒体剪辑">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6b4a'/%3E%3Cpath d='M12 10l10 6-10 6z' fill='%23fff'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --brand: #ff6b4a;
+      --brand-deep: #e04e2e;
+      --brand-soft: #fff2ee;
+      --ink: #1e2229;
+      --ink-mid: #4b5563;
+      --ink-soft: #6b7280;
+      --line: #e5e7eb;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+      --announce-h: 36px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h));
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--sticky-offset) + 12px); }
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+    img, svg { vertical-align: middle; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== 公告条 ===== */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-h);
+      background: linear-gradient(90deg, var(--brand-deep), var(--brand));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: .02em;
+      overflow: hidden;
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .announce-tag {
+      background: rgba(255,255,255,.22);
+      padding: 1px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .announce-bar a { color: #fff; text-decoration: underline; text-underline-offset: 3px; opacity: .9; }
+    .announce-bar a:hover { opacity: 1; }
+
+    /* ===== 页头 ===== */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 99;
+      height: var(--header-h);
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(255,107,74,.3);
+    }
+    .brand-logo svg { width: 22px; height: 22px; }
+    .brand-name {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: var(--ink-mid);
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+    }
+    .header-nav a:hover, .header-nav a.active {
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-weight: 600;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0 4px 0 12px;
+      height: 36px;
+      transition: border-color .2s;
+    }
+    .search-box:focus-within { border-color: var(--brand); }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 130px;
+      color: var(--ink);
+      font-family: inherit;
+    }
+    .search-box input::placeholder { color: #9ca3af; }
+    .search-box button {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      transition: background .15s;
+    }
+    .search-box button:hover { background: var(--line); color: var(--ink); }
+    .search-box button svg { width: 15px; height: 15px; }
+    .btn-ghost {
+      padding: 6px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      background: #fff;
+      transition: border-color .15s, color .15s;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { border-color: var(--brand); color: var(--brand-deep); }
+    .btn-primary {
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #fff;
+      background: var(--brand);
+      transition: background .15s;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .btn-primary:hover { background: var(--brand-deep); }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      background: linear-gradient(160deg, #1a1d24 0%, #272b35 55%, #3a2a26 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(255,107,74,.28), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: center;
+      padding: 56px 0 60px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,107,74,.16);
+      border: 1px solid rgba(255,107,74,.35);
+      color: #ffb4a0;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      letter-spacing: .04em;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 6px var(--brand);
+    }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: #b8bcc6;
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 26px;
+    }
+    .hero-desc strong { color: #ffd0c4; font-weight: 600; }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .hero-actions .btn-primary {
+      padding: 10px 24px;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+    .hero-actions .btn-outline {
+      padding: 10px 24px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.25);
+      color: #e5e7eb;
+      transition: border-color .2s, background .2s;
+    }
+    .hero-actions .btn-outline:hover { border-color: var(--brand); background: rgba(255,107,74,.1); }
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 22px;
+    }
+    .hero-stats div { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stats .num { font-size: 22px; font-weight: 800; color: #fff; }
+    .hero-stats .label { font-size: 12px; color: #8d93a0; }
+    .hero-visual {
+      position: relative;
+      height: 300px;
+    }
+    .hero-visual .frame {
+      position: absolute;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #2e323d, #1e2128);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 16px 40px rgba(0,0,0,.4);
+    }
+    .hero-visual .f1 { width: 260px; height: 168px; top: 18px; left: 30px; z-index: 3; }
+    .hero-visual .f2 { width: 200px; height: 130px; top: 130px; right: 0; z-index: 2; opacity: .85; }
+    .hero-visual .f3 { width: 160px; height: 108px; bottom: 6px; left: 0; z-index: 1; opacity: .65; }
+    .hero-visual .frame .play {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(255,107,74,.9);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(255,107,74,.5);
+    }
+    .hero-visual .frame .play svg { width: 18px; height: 18px; margin-left: 2px; }
+    .hero-visual .frame .bars {
+      position: absolute;
+      bottom: 12px; left: 12px; right: 12px;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .hero-visual .frame .bars span {
+      height: 4px; border-radius: 2px;
+      background: rgba(255,255,255,.15);
+    }
+    .hero-visual .frame .bars span:nth-child(1) { width: 70%; background: rgba(255,107,74,.5); }
+    .hero-visual .frame .bars span:nth-child(2) { width: 45%; }
+
+    /* ===== 三栏主内容 ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 250px;
+      gap: 28px;
+      align-items: start;
+      padding: 32px 0 56px;
+    }
+
+    /* 左栏 */
+    .side-left {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 20px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .side-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .side-title::before {
+      content: '';
+      width: 3px; height: 12px;
+      border-radius: 2px;
+      background: var(--brand);
+    }
+    .side-nav { display: flex; flex-direction: column; gap: 2px; }
+    .side-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 10px;
+      border-radius: 7px;
+      font-size: 13.5px;
+      color: var(--ink-mid);
+      transition: background .15s, color .15s;
+    }
+    .side-nav a:hover { background: var(--brand-soft); color: var(--brand-deep); }
+    .side-nav a .count {
+      font-size: 11px;
+      color: #9ca3af;
+      background: var(--bg);
+      padding: 0 6px;
+      border-radius: 10px;
+      line-height: 18px;
+    }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud a {
+      font-size: 12px;
+      padding: 3px 9px;
+      border-radius: 14px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--ink-mid);
+      transition: all .15s;
+    }
+    .tag-cloud a:hover { background: var(--brand-soft); border-color: var(--brand); color: var(--brand-deep); }
+
+    /* 中栏 */
+    .main-col { min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      box-shadow: var(--shadow);
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-head h2 .mark {
+      width: 5px;
+      height: 20px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--brand), var(--brand-deep));
+      flex-shrink: 0;
+    }
+    .section-head .sub { font-size: 12.5px; color: var(--ink-soft); }
+    .more-link {
+      font-size: 13px;
+      color: var(--brand-deep);
+      font-weight: 600;
+      white-space: nowrap;
+      transition: opacity .15s;
+    }
+    .more-link:hover { opacity: .75; }
+
+    /* 简介 */
+    .intro-text { font-size: 14.5px; color: var(--ink-mid); line-height: 1.9; }
+    .intro-text p { margin-bottom: 12px; }
+    .intro-text p:last-child { margin-bottom: 0; }
+    .intro-text strong { color: var(--ink); font-weight: 600; }
+
+    /* 热门卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .content-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .content-card:hover {
+      border-color: #fbc4b8;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .card-type {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-deep);
+      background: var(--brand-soft);
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: .02em;
+    }
+    .card-hot { font-size: 11.5px; color: var(--ink-soft); display: flex; align-items: center; gap: 3px; }
+    .card-hot svg { width: 11px; height: 11px; color: var(--brand); }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .card-title:hover { color: var(--brand-deep); }
+    .card-desc { font-size: 12.5px; color: var(--ink-soft); line-height: 1.65; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+    .card-tags span {
+      font-size: 11px;
+      color: var(--ink-soft);
+      background: var(--bg);
+      padding: 1px 7px;
+      border-radius: 10px;
+      border: 1px solid #eef0f3;
+    }
+
+    /* 最新更新列表 */
+    .update-list { display: flex; flex-direction: column; }
+    .update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .update-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .update-item:first-child { padding-top: 0; }
+    .update-index {
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--ink-soft);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .update-item:nth-child(-n+3) .update-index {
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+    }
+    .update-body { flex: 1; min-width: 0; }
+    .update-title-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .update-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .update-name:hover { color: var(--brand-deep); }
+    .update-tag {
+      font-size: 10.5px;
+      color: #9ca3af;
+      border: 1px solid var(--line);
+      padding: 0 6px;
+      border-radius: 3px;
+      line-height: 16px;
+      flex-shrink: 0;
+    }
+    .update-summary { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; line-height: 1.6; }
+    .update-time { font-size: 11px; color: #b0b6c0; flex-shrink: 0; white-space: nowrap; margin-top: 3px; }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .cat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 14px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      transition: all .18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--brand);
+      opacity: 0;
+      transition: opacity .18s;
+    }
+    .cat-item:hover { border-color: #fbc4b8; background: #fffaf9; }
+    .cat-item:hover::before { opacity: 1; }
+    .cat-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+    .cat-count { font-size: 11.5px; color: var(--ink-soft); }
+
+    /* 深度解析 */
+    .deep h3 {
+      font-size: 16.5px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .deep h3:first-of-type { margin-top: 0; }
+    .deep h3 .h3-mark {
+      width: 4px; height: 15px;
+      border-radius: 2px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+    .deep p { font-size: 14px; color: var(--ink-mid); line-height: 1.9; margin-bottom: 10px; }
+    .deep ul { margin: 8px 0 14px; padding-left: 0; display: flex; flex-direction: column; gap: 6px; }
+    .deep ul li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+    .deep ul li::before {
+      content: '';
+      position: absolute;
+      left: 2px; top: 9px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--brand);
+    }
+    .deep .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px;
+      font-size: 13px;
+    }
+    .deep .compare-table th, .deep .compare-table td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .deep .compare-table th {
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-weight: 700;
+    }
+    .deep .compare-table td { color: var(--ink-mid); }
+
+    /* 体验指南 */
+    .guide-steps { display: flex; flex-direction: column; gap: 14px; }
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .guide-num {
+      width: 30px; height: 30px;
+      border-radius: 9px;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .guide-content { flex: 1; }
+    .guide-content h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; color: var(--ink); }
+    .guide-content p { font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    details.faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    details.faq-item[open] { border-color: #fbc4b8; }
+    details.faq-item summary {
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+      transition: background .15s;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary:hover { background: #fffaf9; }
+    details.faq-item summary .arrow {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .2s, background .2s;
+    }
+    details.faq-item summary .arrow svg { width: 10px; height: 10px; color: var(--ink-soft); }
+    details.faq-item[open] summary .arrow { transform: rotate(180deg); background: var(--brand-soft); }
+    details.faq-item[open] summary .arrow svg { color: var(--brand-deep); }
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      border-top: 1px dashed var(--line);
+      padding-top: 12px;
+      margin: 0 16px 14px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .comment-card {
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      border: 1px solid transparent;
+      transition: border-color .15s;
+    }
+    .comment-card:hover { border-color: var(--line); }
+    .comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .avatar {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .comment-name { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+    .comment-stars { margin-left: auto; font-size: 10px; color: #f5a623; letter-spacing: 1px; }
+    .comment-text { font-size: 12.5px; color: var(--ink-mid); line-height: 1.65; }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; }
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-item:first-child { padding-top: 0; }
+    .news-date {
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      background: var(--bg);
+      padding: 3px 8px;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .news-body { flex: 1; min-width: 0; }
+    .news-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+    .news-title:hover { color: var(--brand-deep); }
+    .news-summary { font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; }
+
+    /* 相关推荐标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink-mid);
+      transition: all .15s;
+    }
+    .rec-tags a:hover {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(255,107,74,.3);
+    }
+
+    /* 趋势观察 */
+    .trend-list { display: flex; flex-direction: column; gap: 12px; }
+    .trend-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+    }
+    .trend-icon {
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: var(--brand-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .trend-icon svg { width: 16px; height: 16px; color: var(--brand-deep); }
+    .trend-content h4 { font-size: 13.5px; font-weight: 700; margin-bottom: 2px; }
+    .trend-content p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.65; }
+
+    /* 右栏 */
+    .side-right {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 20px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .toc-list { display: flex; flex-direction: column; gap: 1px; }
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      transition: background .15s, color .15s;
+    }
+    .toc-list a:hover { background: var(--brand-soft); color: var(--brand-deep); }
+    .toc-list a .toc-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: #d1d5db;
+      flex-shrink: 0;
+    }
+    .toc-list a:hover .toc-dot { background: var(--brand); }
+    .hot-list { display: flex; flex-direction: column; gap: 2px; }
+    .hot-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 6px;
+      border-radius: 6px;
+      transition: background .15s;
+    }
+    .hot-item:hover { background: var(--bg); }
+    .hot-rank {
+      width: 18px; height: 18px;
+      border-radius: 5px;
+      background: var(--bg);
+      color: var(--ink-soft);
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hot-item:nth-child(1) .hot-rank { background: var(--brand); color: #fff; }
+    .hot-item:nth-child(2) .hot-rank { background: #ff9d85; color: #fff; }
+    .hot-item:nth-child(3) .hot-rank { background: #ffc9bb; color: var(--brand-deep); }
+    .hot-title { font-size: 12.5px; color: var(--ink-mid); line-height: 1.5; }
+    .hot-item:hover .hot-title { color: var(--brand-deep); }
+    .extend-list { display: flex; flex-direction: column; gap: 8px; }
+    .extend-list a {
+      font-size: 12.5px;
+      color: var(--ink-mid);
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+      transition: color .15s;
+    }
+    .extend-list a::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 7px;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: #d1d5db;
+      transition: background .15s;
+    }
+    .extend-list a:hover { color: var(--brand-deep); }
+    .extend-list a:hover::before { background: var(--brand); }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      padding: 24px;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      border: 1px dashed var(--line);
+    }
+    .no-result.show { display: block; }
+    .search-highlight { background: #fff3b0; padding: 0 1px; border-radius: 2px; }
+
+    /* ===== 页尾 ===== */
+    .site-footer {
+      background: #1a1d24;
+      color: #9ca3af;
+      padding: 44px 0 0;
+      margin-top: 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-brand .brand-name { color: #fff; font-size: 18px; margin-bottom: 8px; display: block; }
+    .footer-brand p { font-size: 12.5px; line-height: 1.8; color: #8d93a0; max-width: 280px; }
+    .footer-col h5 {
+      font-size: 13px;
+      color: #e5e7eb;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: .03em;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 7px; }
+    .footer-col a { font-size: 12.5px; color: #8d93a0; transition: color .15s; }
+    .footer-col a:hover { color: var(--brand); }
+    .footer-bottom {
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+      color: #6b7280;
+    }
+    .footer-bottom .example-note { color: #6b7280; }
+    .footer-bottom a { color: #6b7280; }
+    .footer-bottom a:hover { color: var(--brand); }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1180px) {
+      .layout { grid-template-columns: 170px minmax(0,1fr) 230px; gap: 20px; }
+      .hero-inner { grid-template-columns: 1fr 300px; gap: 32px; }
+      .hero h1 { font-size: 34px; }
+      .cat-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: minmax(0,1fr) 240px; }
+      .side-left { display: none; }
+      .hero-inner { grid-template-columns: 1fr 260px; gap: 24px; }
+      .hero h1 { font-size: 32px; }
+      .hero-visual { height: 260px; }
+      .hero-visual .f1 { width: 220px; height: 142px; left: 10px; }
+      .hero-visual .f2 { width: 170px; height: 110px; top: 110px; }
+      .hero-visual .f3 { width: 140px; height: 92px; }
+    }
+    @media (max-width: 800px) {
+      :root { --header-h: 56px; }
+      .layout { grid-template-columns: 1fr; }
+      .side-right { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 20px; padding: 36px 0 40px; }
+      .hero h1 { font-size: 28px; }
+      .hero-visual { display: none; }
+      .hero-stats { gap: 24px; }
+      .header-nav { display: none; }
+      .brand-name { font-size: 18px; }
+      .search-box input { width: 100px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .comment-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .panel { padding: 20px 18px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 14px; }
+      .hero h1 { font-size: 24px; }
+      .hero-desc { font-size: 13.5px; }
+      .hero-actions { gap: 8px; }
+      .hero-actions .btn-primary, .hero-actions .btn-outline { padding: 8px 16px; font-size: 13px; }
+      .hero-stats { gap: 18px; }
+      .hero-stats .num { font-size: 18px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .search-box { display: none; }
+      .btn-ghost { padding: 5px 10px; font-size: 12px; }
+      .btn-primary { padding: 5px 12px; font-size: 12px; }
+      .section-head h2 { font-size: 17px; }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="region" aria-label="公告">
+    <div class="container">
+      <span class="announce-tag">上新</span>
+      <span>「手机剪辑入门到进阶」系列新增 12 节实操课，涵盖转场设计、调色与音频处理。</span>
+      <a href="/#latest">查看更新</a>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/#top" aria-label="51视频学院首页">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5L18.5 12 8 18.5V5.5Z" fill="#fff"/></svg>
+        </span>
+        <span class="brand-name">51视频学院</span>
+      </a>
+      <nav class="header-nav" aria-label="频道导航">
+        <a href="/#hot" class="active">热门课程</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">剪辑解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">学员评价</a>
+        <a href="/#news">资讯动态</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box" role="search">
+          <input type="search" id="siteSearch" placeholder="搜索课程或技巧" aria-label="搜索课程或技巧">
+          <button type="button" id="searchBtn" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </div>
+        <a href="/#guide" class="btn-ghost">新手指南</a>
+        <a href="/#hot" class="btn-primary">开始学习</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏 -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div>
+          <span class="hero-badge"><span class="dot"></span>实操课程 · 每周更新</span>
+          <h1>51视频学院</h1>
+          <p class="hero-desc">
+            面向短视频剪辑初学者与自媒体人的实战内容库。覆盖<strong>手机剪辑培训</strong>、<strong>零基础拍摄教程</strong>与<strong>视频制作入门</strong>三大方向，从时间线操作、转场节奏到调色与音频处理，按项目流程拆解每一步。
+          </p>
+          <div class="hero-actions">
+            <a href="/#hot" class="btn-primary">浏览热门课程</a>
+            <a href="/#deep" class="btn-outline">查看深度解析</a>
+          </div>
+          <div class="hero-stats">
+            <div><span class="num">120+</span><span class="label">实操课节</span></div>
+            <div><span class="num">8</span><span class="label">内容分类</span></div>
+            <div><span class="num">每周三</span><span class="label">固定更新</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="frame f3"><div class="bars"><span></span><span></span></div></div>
+          <div class="frame f2"><div class="bars"><span></span><span></span></div></div>
+          <div class="frame f1">
+            <div class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5L18.5 12 8 18.5V5.5Z"/></svg></div>
+            <div class="bars"><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="layout">
+
+        <!-- 左栏 -->
+        <aside class="side-left" aria-label="栏目导航与标签索引">
+          <div class="side-card">
+            <div class="side-title">栏目索引</div>
+            <nav class="side-nav">
+              <a href="/#intro">内容简介</a>
+              <a href="/#hot">热门课程 <span class="count">10</span></a>
+              <a href="/#latest">最新更新 <span class="count">10</span></a>
+              <a href="/#categories">分类入口 <span class="count">8</span></a>
+              <a href="/#deep">剪辑解析</a>
+              <a href="/#guide">体验指南</a>
+              <a href="/#faq">常见问题</a>
+              <a href="/#comments">学员评价</a>
+              <a href="/#news">资讯动态</a>
+              <a href="/#recommend">相关推荐</a>
+            </nav>
+          </div>
+          <div class="side-card">
+            <div class="side-title">热门标签</div>
+            <div class="tag-cloud">
+              <a href="/#hot">手机剪辑</a>
+              <a href="/#hot">转场技巧</a>
+              <a href="/#hot">调色入门</a>
+              <a href="/#hot">音频处理</a>
+              <a href="/#categories">短视频课程</a>
+              <a href="/#categories">零基础拍摄</a>
+              <a href="/#deep">时间线操作</a>
+              <a href="/#guide">素材管理</a>
+              <a href="/#hot">字幕制作</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 中栏 -->
+        <div class="main-col">
+
+          <!-- 1. 内容简介 -->
+          <section class="panel" id="intro">
+            <div class="section-head">
+              <h2><span class="mark"></span>关于51视频学院</h2>
+            </div>
+            <div class="intro-text">
+              <p>51视频学院是一个面向短视频剪辑初学者与自媒体人的实操内容库，围绕短视频剪辑课程、零基础拍摄教程和手机剪辑培训三个方向持续整理实用内容。如果你正在找一套能跟着做的视频制作入门路径，这里按项目流程把拍摄、剪辑、调色、音频和导出拆成可操作的步骤。</p>
+              <p>内容覆盖从手机端到桌面端的常见剪辑场景。手机剪辑培训部分重点讲解剪映、CapCut 等移动工具的时间线操作、关键帧、蒙版和文字动画；零基础拍摄教程则从构图、光线、收音和运镜入手，帮助你在拍摄阶段就拿到可用素材；短视频剪辑课程更侧重叙事节奏、转场设计和情绪推进，适合已经能完成基础剪辑、想提升成片质感的创作者。</p>
+              <p>每个课程页面会标注适用人群、前置要求和预计练习时长。如果你在犹豫先学手机剪辑还是直接上桌面软件，可以参考分类入口里的工具对照说明，按自己的设备条件和更新频率选择。所有内容按周更新，热门课程和最新更新两个栏目会持续同步新增课节。</p>
+            </div>
+          </section>
+
+          <!-- 2. 热门内容推荐 -->
+          <section class="panel" id="hot">
+            <div class="section-head">
+              <h2><span class="mark"></span>热门短视频剪辑课程推荐</h2>
+              <a href="/#latest" class="more-link">查看更新 →</a>
+            </div>
+            <div class="card-grid" id="hotCardGrid">
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">手机剪辑</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 9.2</span></div>
+                <h3 class="card-title">剪映关键帧与蒙版：手机端做动态跟踪</h3>
+                <p class="card-desc">从关键帧基础到蒙版跟踪，用三个案例讲清楚手机端如何做出跟随式字幕和局部放大效果。</p>
+                <div class="card-tags"><span>手机剪辑培训</span><span>关键帧</span><span>蒙版</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">拍摄入门</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 8.8</span></div>
+                <h3 class="card-title">零基础拍摄教程：手机也能拍出稳定画面</h3>
+                <p class="card-desc">讲解手持姿势、简易稳定器和移动拍摄要领，适合没有专业设备但需要提升画面稳定性的初学者。</p>
+                <div class="card-tags"><span>零基础拍摄教程</span><span>运镜</span><span>防抖</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">叙事节奏</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 8.5</span></div>
+                <h3 class="card-title">短视频剪辑课程：三分钟讲清卡点与转场节奏</h3>
+                <p class="card-desc">拆解卡点视频的节拍对齐方法，对比硬切、叠化与匹配剪辑在不同情绪段落中的使用差异。</p>
+                <div class="card-tags"><span>短视频剪辑课程</span><span>卡点</span><span>转场</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">调色基础</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 8.1</span></div>
+                <h3 class="card-title">手机剪辑调色入门：从偏色校正到氛围风格</h3>
+                <p class="card-desc">用同一段素材演示白平衡、饱和度和曲线调整，帮助初学者建立可复用的调色流程。</p>
+                <div class="card-tags"><span>手机剪辑培训</span><span>调色</span><span>白平衡</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">音频处理</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 7.9</span></div>
+                <h3 class="card-title">背景音乐与人声平衡：手机剪辑音频处理实操</h3>
+                <p class="card-desc">讲解音量包络、降噪和淡入淡出的基本操作，解决成片中背景音乐盖过人声的常见问题。</p>
+                <div class="card-tags"><span>视频制作入门</span><span>音频</span><span>降噪</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">脚本策划</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 7.6</span></div>
+                <h3 class="card-title">短视频脚本写作入门：从选题到分镜表</h3>
+                <p class="card-desc">提供一份可直接套用的分镜表模板，讲清开头三秒钩子、信息密度和结尾引导的写法。</p>
+                <div class="card-tags"><span>短视频剪辑课程</span><span>脚本</span><span>分镜</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">字幕设计</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 7.4</span></div>
+                <h3 class="card-title">动态字幕与文字动画：手机剪辑的字幕进阶</h3>
+                <p class="card-desc">介绍逐字出现、弹跳和描边字幕的制作方法，并说明字号与安全区域在不同平台上的适配差异。</p>
+                <div class="card-tags"><span>手机剪辑培训</span><span>字幕</span><span>文字动画</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">素材管理</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 7.1</span></div>
+                <h3 class="card-title">素材整理与工程管理：让剪辑效率翻倍</h3>
+                <p class="card-desc">从文件夹命名、代理剪辑到缓存清理，分享一套适合个人创作者的素材管理习惯。</p>
+                <div class="card-tags"><span>视频制作入门</span><span>素材管理</span><span>效率</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">导出设置</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 6.9</span></div>
+                <h3 class="card-title">视频导出参数怎么选：分辨率、码率与帧率</h3>
+                <p class="card-desc">对比不同平台上传要求，说明竖屏短视频在导出时如何平衡画质与文件大小。</p>
+                <div class="card-tags"><span>短视频剪辑课程</span><span>导出</span><span>码率</span></div>
+              </article>
+              <article class="content-card">
+                <div class="card-top"><span class="card-type">光线基础</span><span class="card-hot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>热度 6.7</span></div>
+                <h3 class="card-title">自然光与补光灯：零基础拍摄的光线控制</h3>
+                <p class="card-desc">用窗光、反光板和一支补光灯演示三种人像布光方案，适合室内口播和产品展示场景。</p>
+                <div class="card-tags"><span>零基础拍摄教程</span><span>布光</span><span>人像</span></div>
+              </article>
+            </div>
+            <div class="no-result" id="noResult">没有找到匹配的内容，试试更短的关键词，例如“手机剪辑”或“调色”。</div>
+          </section>
+
+          <!-- 3. 最新更新 -->
+          <section class="panel" id="latest">
+            <div class="section-head">
+              <h2><span class="mark"></span>最新更新与热门动态</h2>
+              <span class="sub">每周三固定新增</span>
+            </div>
+            <div class="update-list">
+              <div class="update-item">
+                <span class="update-index">01</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">剪映关键帧与蒙版</a><span class="update-tag">手机剪辑</span></div>
+                  <p class="update-summary">新增“蒙版跟踪人物移动”案例，补充关键帧缓动曲线的调节说明。</p>
+                </div>
+                <span class="update-time">06-18</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">02</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">零基础拍摄教程：稳定画面</a><span class="update-tag">拍摄</span></div>
+                  <p class="update-summary">更新手持姿势分解图，加入手机稳定器与无设备拍摄的对比片段。</p>
+                </div>
+                <span class="update-time">06-16</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">03</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">卡点与转场节奏</a><span class="update-tag">叙事</span></div>
+                  <p class="update-summary">补充匹配剪辑的素材准备清单，新增三个不同情绪段落的节拍对照示例。</p>
+                </div>
+                <span class="update-time">06-14</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">04</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">手机剪辑调色入门</a><span class="update-tag">调色</span></div>
+                  <p class="update-summary">新增肤色保护与曲线分区调整章节，附一段室内偏色素材供练习。</p>
+                </div>
+                <span class="update-time">06-12</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">05</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">音频处理实操</a><span class="update-tag">音频</span></div>
+                  <p class="update-summary">补充手机端降噪参数建议，讲解人声与背景音乐的音量包络画法。</p>
+                </div>
+                <span class="update-time">06-10</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">06</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">短视频脚本写作入门</a><span class="update-tag">脚本</span></div>
+                  <p class="update-summary">新增“产品展示类”分镜模板，补充开头三秒钩子的六种常见写法。</p>
+                </div>
+                <span class="update-time">06-08</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">07</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">动态字幕与文字动画</a><span class="update-tag">字幕</span></div>
+                  <p class="update-summary">更新逐字动画的替代方案，补充不同平台安全区域的尺寸对照表。</p>
+                </div>
+                <span class="update-time">06-06</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">08</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">素材整理与工程管理</a><span class="update-tag">效率</span></div>
+                  <p class="update-summary">补充代理剪辑的适用场景说明，新增一套个人项目文件夹命名模板。</p>
+                </div>
+                <span class="update-time">06-04</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">09</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">视频导出参数怎么选</a><span class="update-tag">导出</span></div>
+                  <p class="update-summary">更新竖屏短视频码率建议，补充不同帧率在慢动作素材中的取舍说明。</p>
+                </div>
+                <span class="update-time">06-02</span>
+              </div>
+              <div class="update-item">
+                <span class="update-index">10</span>
+                <div class="update-body">
+                  <div class="update-title-row"><a href="/#hot" class="update-name">自然光与补光灯</a><span class="update-tag">光线</span></div>
+                  <p class="update-summary">新增窗光方向示意，补充反光板距离与补光强度的关系说明。</p>
+                </div>
+                <span class="update-time">05-30</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. 分类入口 -->
+          <section class="panel" id="categories">
+            <div class="section-head">
+              <h2><span class="mark"></span>按学习方向找内容</h2>
+              <span class="sub">8 个分类入口</span>
+            </div>
+            <div class="cat-grid">
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">手机剪辑培训</span>
+                <span class="cat-count">32 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">零基础拍摄教程</span>
+                <span class="cat-count">24 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">短视频剪辑课程</span>
+                <span class="cat-count">28 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">调色与画面风格</span>
+                <span class="cat-count">15 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">音频与声音设计</span>
+                <span class="cat-count">11 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">脚本与分镜策划</span>
+                <span class="cat-count">9 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">字幕与文字动画</span>
+                <span class="cat-count">8 节实操课</span>
+              </a>
+              <a href="/#hot" class="cat-item">
+                <span class="cat-name">导出与平台适配</span>
+                <span class="cat-count">6 节实操课</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- 5. 深度解析正文 -->
+          <section class="panel deep" id="deep">
+            <div class="section-head">
+              <h2><span class="mark"></span>深度解析：从素材到成片的剪辑流程</h2>
+            </div>
+            <h3><span class="h3-mark"></span>先确定成片方向，再开软件</h3>
+            <p>很多初学者打开剪辑软件后面对一片空白的预览窗，不知道该先拖入哪段素材。更有效的做法是在开软件之前先想清楚成片的用途和投放平台：是竖屏 15 秒的展示片段，还是横屏三到五分钟的讲解视频。51视频学院在短视频剪辑课程中把这一步称为“成片定义”，它决定了画幅比例、平均镜头长度和字幕字号等一连串后续选择。</p>
+            <p>以竖屏短视频为例，手机屏幕的可视范围有限，同一句话的字幕不能拆成三行；横屏讲解视频则可以把步骤说明放在画面角落。先确定这些约束，素材挑选和剪辑节奏就会自然收敛，避免反复修改。</p>
+
+            <h3><span class="h3-mark"></span>素材筛选：留下能用的，而不是全部</h3>
+            <p>拍摄阶段容易产生大量废片，剪辑前先做一轮粗筛能显著减少时间线压力。可以按以下顺序处理：</p>
+            <ul>
+              <li>按场景分组，同一动作只保留完成度最高的一条；</li>
+              <li>标记音频可用性，口播素材优先检查人声是否清晰；</li>
+              <li>单独存放需要调色的片段，避免与常规素材混在一起；</li>
+              <li>为备用素材建立“待定”文件夹，而不是直接删除。</li>
+            </ul>
+            <p>零基础拍摄教程中反复强调的一点是：拍摄时多留三秒前后余量，剪辑时才有空间做转场和节奏调整。素材管理习惯一旦建立，后续套用模板或复用工程会轻松很多。</p>
+
+            <h3><span class="h3-mark"></span>时间线操作与节奏控制</h3>
+            <p>时间线是剪辑的核心工作区。手机剪辑培训通常从分割、删除、拖动排序讲起，再过渡到变速和关键帧。节奏控制的关键不在于软件操作多熟练，而在于理解镜头之间的信息密度：连续三个快速镜头之后需要一个稍长的停留，观众才能消化画面内容。</p>
+            <p>在 51视频学院的热门课程里，卡点练习被拆成“节拍标记—粗剪对齐—微调留白”三步。先按音乐重音把镜头切到大致位置，再逐段调整头尾各一两帧，最后检查整段是否出现连续快切造成的视觉疲劳。这个流程对手机端和桌面端都适用。</p>
+
+            <h3><span class="h3-mark"></span>调色与音频的先后顺序</h3>
+            <p>调色和音频处理没有绝对先后，但建议先处理音频。人声和背景音乐的音量关系会影响观众对画面节奏的感知，如果先调色后改音频，可能需要重新审视画面亮度与情绪是否匹配。一个常见的顺序是：降噪与音量平衡 → 画面基础校正 → 风格化调色 → 字幕与图形叠加 → 导出。</p>
+            <table class="compare-table">
+              <thead>
+                <tr><th>处理环节</th><th>手机端常见操作</th><th>注意事项</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>音频降噪</td><td>一键降噪 + 音量包络</td><td>避免过度降噪导致人声发闷</td></tr>
+                <tr><td>基础校正</td><td>白平衡、曝光、对比度</td><td>先统一同场景片段再风格化</td></tr>
+                <tr><td>风格化调色</td><td>滤镜强度、曲线、色温</td><td>保留肤色自然，避免整体偏色</td></tr>
+                <tr><td>字幕叠加</td><td>自动识别 + 手动校对</td><td>检查安全区域与字号可读性</td></tr>
+              </tbody>
+            </table>
+
+            <h3><span class="h3-mark"></span>导出前的检查清单</h3>
+            <p>导出前的最后一遍检查往往能救回不少返工。建议按顺序过一遍：画幅比例是否符合平台要求、首帧是否包含有效信息、字幕是否全部在安全区域内、背景音乐是否盖过人声、片尾是否有多余黑帧。短视频剪辑课程中把这套清单做成可勾选的检查表，手机剪辑培训则更侧重导出参数与文件大小的平衡。</p>
+            <p>视频制作入门阶段不必追求一次到位。先完成一条结构完整的成片，再逐项优化调色和音频细节，比反复打磨单个镜头更容易建立完整的剪辑流程认知。</p>
+          </section>
+
+          <!-- 6. 体验指南 -->
+          <section class="panel" id="guide">
+            <div class="section-head">
+              <h2><span class="mark"></span>体验指南：怎么用这套内容学剪辑</h2>
+            </div>
+            <div class="guide-steps">
+              <div class="guide-step">
+                <span class="guide-num">1</span>
+                <div class="guide-content">
+                  <h4>先看分类入口确定方向</h4>
+                  <p>根据设备条件和目标选择手机剪辑培训或桌面端课程，分类入口会标注每类内容的适用人群和前置要求。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="guide-num">2</span>
+                <div class="guide-content">
+                  <h4>用搜索框快速定位课程</h4>
+                  <p>在页头搜索框输入“调色”“转场”或“音频”等关键词，热门课程区会实时筛选匹配的卡片，无结果时会有提示。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="guide-num">3</span>
+                <div class="guide-content">
+                  <h4>按课程顺序练习并收藏</h4>
+                  <p>每门课程标注了建议练习时长和前置课节，完成一节后回到最新更新查看是否有配套素材或补充案例。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="guide-num">4</span>
+                <div class="guide-content">
+                  <h4>通过深度解析扩展思路</h4>
+                  <p>遇到流程性问题时查看深度解析板块，它按“成片定义—素材筛选—节奏—调色音频—导出”的顺序串联各个环节。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. FAQ -->
+          <section class="panel" id="faq">
+            <div class="section-head">
+              <h2><span class="mark"></span>常见问题</h2>
+            </div>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>手机剪辑培训适合完全没有基础的人吗？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">适合。手机剪辑培训从时间线基础操作讲起，包括导入素材、分割、删除和排序，不要求提前掌握专业术语。建议按分类入口里的顺序从第一节开始，每节配一段练习素材。</div>
+              </details>
+              <details class="faq-item">
+                <summary>零基础拍摄教程需要准备什么设备？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">一部手机即可开始。教程中的大部分案例使用手机拍摄，部分章节会用到简易三脚架和一支补光灯，但都提供了无设备条件下的替代方案，不影响核心练习。</div>
+              </details>
+              <details class="faq-item">
+                <summary>短视频剪辑课程一般多久更新一次？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">每周三固定新增课节或补充案例，最新更新栏目会同步显示新增内容。热门课程会根据练习反馈补充素材和常见问题说明。</div>
+              </details>
+              <details class="faq-item">
+                <summary>手机剪辑和电脑剪辑先学哪个更好？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">如果主要发布竖屏短视频，手机剪辑培训的流程更短、上手更快；如果需要处理多轨道、长片或精细调色，桌面端软件更合适。分类入口里的工具对照说明列出了两种方式的适用场景，可以按自己的更新频率和设备条件选择。</div>
+              </details>
+              <details class="faq-item">
+                <summary>调色和音频处理应该先做哪一步？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">建议先处理音频再调色。人声与背景音乐的音量关系会影响整体节奏感知，先确定声音结构，再调整画面亮度和色彩，可以减少反复修改。</div>
+              </details>
+              <details class="faq-item">
+                <summary>视频制作入门需要多久才能独立完成一条成片？<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+                <div class="faq-answer">按每周练习两到三次、每次完成一节课的节奏，通常四到六周可以独立完成一条结构完整的短视频。重点不是软件熟练度，而是走完“定义—筛选—剪辑—音频—导出”的完整流程。</div>
+              </details>
+            </div>
+          </section>
+
+          <!-- 8. 用户评论 -->
+          <section class="panel" id="comments">
+            <div class="section-head">
+              <h2><span class="mark"></span>学员评价</h2>
+              <span class="sub">来自练习社群的反馈</span>
+            </div>
+            <div class="comment-grid">
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#ff6b4a">林</span>
+                  <span class="comment-name">林小满</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">关键帧那一节讲得很清楚，跟着做了一遍就理解了蒙版跟踪的思路。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#4a90d9">陈</span>
+                  <span class="comment-name">陈默</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">拍摄教程里的手持姿势很实用，比之前稳了不少，就是希望多加点室外场景。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#3cb98a">周</span>
+                  <span class="comment-name">周屿</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">卡点视频的节奏拆解帮我改掉了连续快切的毛病，留白那一段很有启发。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#9b6bd6">吴</span>
+                  <span class="comment-name">吴桐</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">调色入门偏基础，适合刚接触的人。如果已经会白平衡，可以直接看深度解析。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#e8a13a">赵</span>
+                  <span class="comment-name">赵一川</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">音频处理的音量包络讲得细，背景音乐盖人声的问题终于解决了。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#d95f8a">沈</span>
+                  <span class="comment-name">沈知夏</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">脚本模板直接拿来用了，分镜表比纯文字大纲好上手很多。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#5a7bd6">顾</span>
+                  <span class="comment-name">顾南风</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">字幕安全区域那张对照表很实用，换平台发布不用再担心被裁掉。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#6b8e5a">韩</span>
+                  <span class="comment-name">韩青</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">素材管理那节挺接地气，文件夹命名习惯改完之后找东西快多了。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#c46a4a">方</span>
+                  <span class="comment-name">方其</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">导出参数讲得比较全，但不同平台的更新变化快，建议定期补充。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#4aa3a3">许</span>
+                  <span class="comment-name">许星野</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">补光灯那节用窗光做对比很直观，不用买很贵的灯也能拍出干净画面。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#8a6bbf">唐</span>
+                  <span class="comment-name">唐棠</span>
+                  <span class="comment-stars">★★★★☆</span>
+                </div>
+                <p class="comment-text">整体偏实操，每节课时长适中，通勤路上看一遍再回来练刚好。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="avatar" style="background:#b86b3a">秦</span>
+                  <span class="comment-name">秦朗</span>
+                  <span class="comment-stars">★★★★★</span>
+                </div>
+                <p class="comment-text">深度解析里的检查清单帮我省了不少返工，导出前过一遍基本不会漏项。</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. 相关资讯 -->
+          <section class="panel" id="news">
+            <div class="section-head">
+              <h2><span class="mark"></span>相关资讯与动态</h2>
+            </div>
+            <div class="news-list">
+              <div class="news-item">
+                <span class="news-date">06-17</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">手机剪辑工具近期更新梳理：关键帧与蒙版功能变化</a>
+                  <p class="news-summary">主流移动剪辑应用在关键帧缓动和蒙版羽化上做了调整，本文整理对日常剪辑流程的影响。</p>
+                </div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">06-13</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">短视频平台竖屏画幅与字幕安全区域参考</a>
+                  <p class="news-summary">不同平台对底部字幕和右侧按钮区的遮挡范围有差异，导出前可对照本文的尺寸说明检查。</p>
+                </div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">06-09</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">从拍到剪：个人创作者如何建立素材管理习惯</a>
+                  <p class="news-summary">整理了一套按项目日期和场景分类的文件夹结构，配合代理剪辑提升时间线流畅度。</p>
+                </div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">06-05</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">背景音乐与人声平衡的简易检查方法</a>
+                  <p class="news-summary">用手机端音量包络和监听耳机快速判断人声是否被音乐盖住，适合口播类短视频。</p>
+                </div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">06-01</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">室内口播布光：窗光、反光板与单灯方案对比</a>
+                  <p class="news-summary">比较三种低成本布光方式在肤色还原和背景分离上的表现，附距离与角度建议。</p>
+                </div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">05-28</span>
+                <div class="news-body">
+                  <a href="/#hot" class="news-title">短视频转场选择：硬切、叠化与匹配剪辑的适用场景</a>
+                  <p class="news-summary">转场不是越多越好，本文按叙事节奏和信息密度给出不同段落的转场建议。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 10. 相关推荐 -->
+          <section class="panel" id="recommend">
+            <div class="section-head">
+              <h2><span class="mark"></span>相关学习方向推荐</h2>
+            </div>
+            <div class="rec-tags">
+              <a href="/#hot">手机剪辑关键帧入门</a>
+              <a href="/#hot">零基础运镜练习</a>
+              <a href="/#hot">短视频卡点节奏训练</a>
+              <a href="/#hot">手机调色白平衡校正</a>
+              <a href="/#hot">人声与背景音乐平衡</a>
+              <a href="/#hot">短视频分镜表模板</a>
+              <a href="/#hot">动态字幕安全区域</a>
+              <a href="/#hot">竖屏导出码率选择</a>
+            </div>
+          </section>
+
+          <!-- 11. 趋势观察 -->
+          <section class="panel" id="trend">
+            <div class="section-head">
+              <h2><span class="mark"></span>趋势观察：移动端剪辑的三个变化</h2>
+            </div>
+            <div class="trend-list">
+              <div class="trend-item">
+                <span class="trend-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+                <div class="trend-content">
+                  <h4>关键帧操作门槛持续降低</h4>
+                  <p>移动剪辑工具把关键帧入口放在更浅的层级，初学者可以直接在预览窗添加动画，减少了对专业术语的依赖。</p>
+                </div>
+              </div>
+              <div class="trend-item">
+                <span class="trend-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></span>
+                <div class="trend-content">
+                  <h4>模板与手动剪辑并行</h4>
+                  <p>模板能快速出片，但调色和音频细节仍需手动调整。手机剪辑培训中模板使用与手动操作的比例正在重新平衡。</p>
+                </div>
+              </div>
+              <div class="trend-item">
+                <span class="trend-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+                <div class="trend-content">
+                  <h4>竖屏叙事结构更受关注</h4>
+                  <p>竖屏短视频的镜头长度、字幕密度和开头信息量形成了不同于横屏的规律，短视频剪辑课程开始单独拆解竖屏叙事节奏。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- 右栏 -->
+        <aside class="side-right" aria-label="辅助阅读">
+          <div class="side-card">
+            <div class="side-title">页内目录</div>
+            <nav class="toc-list">
+              <a href="/#intro"><span class="toc-dot"></span>内容简介</a>
+              <a href="/#hot"><span class="toc-dot"></span>热门课程</a>
+              <a href="/#latest"><span class="toc-dot"></span>最新更新</a>
+              <a href="/#categories"><span class="toc-dot"></span>分类入口</a>
+              <a href="/#deep"><span class="toc-dot"></span>深度解析</a>
+              <a href="/#guide"><span class="toc-dot"></span>体验指南</a>
+              <a href="/#faq"><span class="toc-dot"></span>常见问题</a>
+              <a href="/#comments"><span class="toc-dot"></span>学员评价</a>
+              <a href="/#news"><span class="toc-dot"></span>相关资讯</a>
+              <a href="/#recommend"><span class="toc-dot"></span>相关推荐</a>
+              <a href="/#trend"><span class="toc-dot"></span>趋势观察</a>
+            </nav>
+          </div>
+          <div class="side-card">
+            <div class="side-title">热门条目</div>
+            <div class="hot-list">
+              <a class="hot-item" href="/#hot"><span class="hot-rank">1</span><span class="hot-title">剪映关键帧与蒙版：动态跟踪</span></a>
+              <a class="hot-item" href="/#hot"><span class="hot-rank">2</span><span class="hot-title">零基础拍摄教程：稳定画面</span></a>
+              <a class="hot-item" href="/#hot"><span class="hot-rank">3</span><span class="hot-title">卡点与转场节奏对照</span></a>
+              <a class="hot-item" href="/#hot"><span class="hot-rank">4</span><span class="hot-title">手机调色：白平衡校正</span></a>
+              <a class="hot-item" href="/#hot"><span class="hot-rank">5</span><span class="hot-title">人声与背景音乐平衡</span></a>
+              <a class="hot-item" href="/#hot"><span class="hot-rank">6</span><span class="hot-title">短视频脚本分镜表模板</span></a>
+            </div>
+          </div>
+          <div class="side-card">
+            <div class="side-title">延伸阅读</div>
+            <div class="extend-list">
+              <a href="/#deep">从素材到成片的完整流程</a>
+              <a href="/#guide">新手指南：四步开始练习</a>
+              <a href="/#faq">手机剪辑与电脑剪辑怎么选</a>
+              <a href="/#trend">移动端剪辑的三个变化</a>
+              <a href="/#news">竖屏字幕安全区域参考</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">51视频学院</span>
+          <p>面向短视频剪辑初学者与自媒体人的实操内容库，覆盖手机剪辑培训、零基础拍摄教程与视频制作入门。每周三更新课节与练习素材。</p>
+        </div>
+        <div class="footer-col">
+          <h5>学习方向</h5>
+          <ul>
+            <li><a href="/#categories">手机剪辑培训</a></li>
+            <li><a href="/#categories">零基础拍摄教程</a></li>
+            <li><a href="/#categories">短视频剪辑课程</a></li>
+            <li><a href="/#categories">调色与画面风格</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>内容栏目</h5>
+          <ul>
+            <li><a href="/#hot">热门课程</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>参与互动</h5>
+          <ul>
+            <li><a href="/#comments">学员评价</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#trend">趋势观察</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 51视频学院 · 内容仅供学习参考</span>
+        <span class="example-note">部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var searchInput = document.getElementById('siteSearch');
+      var searchBtn = document.getElementById('searchBtn');
+      var hotGrid = document.getElementById('hotCardGrid');
+      var noResult = document.getElementById('noResult');
+      var cards = hotGrid ? Array.prototype.slice.call(hotGrid.querySelectorAll('.content-card')) : [];
+
+      function normalize(str) {
+        return (str || '').toLowerCase().replace(/\s+/g, '');
+      }
+
+      function runSearch() {
+        if (!searchInput || !cards.length) return;
+        var q = normalize(searchInput.value);
+        var visible = 0;
+        cards.forEach(function (card) {
+          var text = normalize(card.textContent);
+          var match = !q || text.indexOf(q) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        if (noResult) {
+          noResult.classList.toggle('show', visible === 0);
+        }
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', runSearch);
+      }
+      if (searchInput) {
+        searchInput.addEventListener('input', runSearch);
+        searchInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            runSearch();
+          }
+        });
+      }
+
+      // 平滑锚点：考虑吸顶偏移已由 CSS scroll-padding-top 处理
+      // 左侧导航高亮（依据当前 hash）
+      var navLinks = document.querySelectorAll('.toc-list a, .side-nav a');
+      function highlight() {
+        var hash = window.location.hash || '#top';
+        navLinks.forEach(function (a) {
+          a.style.background = '';
+          a.style.color = '';
+          if (a.getAttribute('href') === '/' + hash) {
+            a.style.background = 'var(--brand-soft)';
+            a.style.color = 'var(--brand-deep)';
+          }
+        });
+      }
+      window.addEventListener('hashchange', highlight);
+      highlight();
+    })();
+  </script>
+</body>
+  </html>
