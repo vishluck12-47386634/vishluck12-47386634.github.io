@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密研究所天天向上-科普实验_冷知识探秘_通勤碎片阅读</title>
+<meta name="description" content="秘密研究所天天向上是一个面向好奇心读者的科普实验与冷知识内容站，收录趣味实验拆解、冷知识探秘、科学思维练习与通勤碎片阅读清单，适合学生、上班族与科普爱好者按主题筛选、按难度追更。">
+<meta name="keywords" content="趣味实验拆解,冷知识探秘,科学思维练习,碎片阅读清单,科普栏目">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23113238'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%234ec5a1' stroke-width='4'/%3E%3Cpath d='M32 17v-6M32 49v6M19 30h-6M45 30h6' stroke='%23f2c14e' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='30' r='4' fill='%23f2c14e'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#12303a;
+  --ink-soft:#3c5860;
+  --teal:#0f6b62;
+  --teal-deep:#0b4a44;
+  --mint:#4ec5a1;
+  --amber:#f2c14e;
+  --amber-deep:#c9922a;
+  --paper:#f7f5ef;
+  --panel:#ffffff;
+  --line:#dde3de;
+  --line-soft:#eae6db;
+  --shadow:0 2px 10px rgba(18,48,58,.07);
+  --shadow-lg:0 8px 26px rgba(18,48,58,.12);
+  --radius:12px;
+  --radius-sm:8px;
+  --announce-h:38px;
+  --head-h:66px;
+  --anchor-offset:116px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--anchor-offset)}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.2px}
+p{margin:0 0 .85em}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin-bottom:.35em}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--amber-deep);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶公告条 ---------- */
+.announce{
+  position:sticky;top:0;z-index:60;
+  height:var(--announce-h);
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;
+  background:linear-gradient(90deg,var(--teal-deep),var(--teal) 55%,#17806f);
+  color:#eafaf3;font-size:13px;letter-spacing:.3px;
+  padding:0 14px;overflow:hidden;white-space:nowrap;
+}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex:none}
+.announce b{color:#fff8e1;font-weight:600}
+.announce a{color:#d6fff0;text-decoration:underline;text-underline-offset:2px}
+
+/* ---------- 吸顶页头 ---------- */
+.site-head{
+  position:sticky;top:var(--announce-h);z-index:55;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(18,48,58,.04);
+}
+.head-inner{
+  max-width:1360px;margin:0 auto;
+  min-height:var(--head-h);
+  display:flex;align-items:center;gap:22px;
+  padding:10px 22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{display:block}
+.brand-text{font-size:19px;font-weight:800;color:var(--teal-deep);letter-spacing:.5px;white-space:nowrap}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:8px}
+.head-nav a{
+  padding:6px 11px;border-radius:999px;font-size:14px;color:var(--ink-soft);
+}
+.head-nav a:hover{background:#eef6f2;color:var(--teal-deep);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;margin-left:auto;flex:none}
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-wrap input{
+  width:190px;padding:7px 32px 7px 12px;border:1px solid var(--line);
+  border-radius:999px;font-size:13px;background:#fbfaf6;color:var(--ink);
+}
+.search-wrap input:focus{border-color:var(--mint);background:#fff;outline:none;box-shadow:0 0 0 3px rgba(78,197,161,.2)}
+.search-wrap .sbtn{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  border:none;background:var(--teal);color:#fff;width:24px;height:24px;border-radius:50%;
+  cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;
+}
+.btn-ghost{
+  border:1px solid var(--teal);color:var(--teal);background:transparent;
+  padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;
+}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+.search-note{
+  display:none;font-size:12px;color:var(--amber-deep);
+  padding:4px 0 0;position:absolute;top:100%;left:2px;white-space:nowrap;
+}
+.search-note.on{display:block}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  max-width:1360px;margin:0 auto;padding:34px 22px 10px;
+}
+.hero-card{
+  position:relative;overflow:hidden;
+  border-radius:18px;
+  background:
+    radial-gradient(1200px 320px at 88% -10%,rgba(78,197,161,.32),transparent 62%),
+    linear-gradient(135deg,#0b3f3a,#0f6b62 58%,#14796c);
+  color:#eafaf3;
+  box-shadow:var(--shadow-lg);
+  padding:38px 40px 36px;
+  display:grid;grid-template-columns:1.35fr .9fr;gap:26px;align-items:center;
+}
+.hero-card::after{
+  content:"";position:absolute;inset:auto -60px -120px auto;width:340px;height:340px;
+  border-radius:50%;border:2px dashed rgba(242,193,78,.35);
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:1.5px;color:#bff3e0;
+  border:1px solid rgba(191,243,224,.4);border-radius:999px;padding:4px 12px;margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(28px,3.6vw,44px);
+  color:#fff;letter-spacing:3px;margin-bottom:14px;
+  text-shadow:0 2px 18px rgba(0,0,0,.18);
+}
+.hero-desc{font-size:15px;color:#d5efe6;max-width:44em;margin-bottom:16px}
+.hero-points{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;padding:0;list-style:none}
+.hero-points li{
+  margin:0;font-size:12.5px;color:#e9fff7;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  padding:4px 11px;border-radius:999px;
+}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.cta-main{
+  background:var(--amber);color:#3a2a05;font-weight:700;font-size:14px;
+  padding:10px 22px;border-radius:999px;border:none;cursor:pointer;
+}
+.cta-main:hover{background:#ffd66e;text-decoration:none}
+.cta-sub{
+  border:1px solid rgba(255,255,255,.55);color:#eafaf3;font-size:14px;
+  padding:10px 20px;border-radius:999px;display:inline-block;
+}
+.cta-sub:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-visual svg{width:100%;max-width:330px;height:auto;filter:drop-shadow(0 10px 22px rgba(0,0,0,.28))}
+
+/* ---------- 三栏骨架 ---------- */
+.layout{
+  max-width:1360px;margin:0 auto;padding:26px 22px 40px;
+  display:grid;grid-template-columns:178px minmax(0,1fr) 252px;gap:24px;
+  align-items:start;
+}
+.col-left,.col-right{position:sticky;top:calc(var(--announce-h) + var(--head-h) + 14px);max-height:calc(100vh - 130px);overflow:auto;scrollbar-width:thin}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:14px;margin-bottom:16px;
+}
+.panel-title{
+  font-size:13px;font-weight:700;color:var(--teal-deep);
+  letter-spacing:1px;margin-bottom:10px;padding-bottom:8px;
+  border-bottom:1px dashed var(--line-soft);
+  display:flex;align-items:center;gap:6px;
+}
+.panel-title::before{content:"";width:4px;height:13px;border-radius:2px;background:var(--mint)}
+.side-nav{list-style:none;margin:0;padding:0}
+.side-nav li{margin:0}
+.side-nav a{
+  display:block;padding:6px 9px;border-radius:var(--radius-sm);
+  font-size:13.5px;color:var(--ink-soft);
+}
+.side-nav a:hover{background:#eef6f2;color:var(--teal-deep);text-decoration:none}
+.side-nav .sub{padding-left:20px;font-size:12.5px;color:#6b8087}
+
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{
+  font-size:12px;padding:3px 9px;border-radius:999px;
+  background:#f0f6f3;color:var(--teal-deep);border:1px solid #d9ebe3;
+}
+.tag-cloud a:hover{background:var(--mint);color:#06302b;text-decoration:none}
+
+/* ---------- 中栏板块 ---------- */
+.section{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:22px 24px 24px;margin-bottom:20px;
+  scroll-margin-top:var(--anchor-offset);
+}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head h2{font-size:19px;color:var(--teal-deep)}
+.sec-head .h2note{font-size:12.5px;color:#7d9299}
+.sec-lead{font-size:14px;color:var(--ink-soft);margin-bottom:16px;max-width:60em}
+
+/* 简介 */
+.intro p{font-size:14.5px;color:#2b4750}
+.intro .hl{background:linear-gradient(transparent 62%,rgba(242,193,78,.5) 62%);font-weight:600;color:#12303a}
+.intro-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.intro-stats div{background:#f4f9f6;border:1px solid #e2efe8;border-radius:var(--radius-sm);padding:9px 12px;text-align:center}
+.intro-stats b{display:block;font-size:18px;color:var(--teal-deep)}
+.intro-stats span{font-size:12px;color:#6b8087}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:14px;background:#fdfcfa;display:flex;flex-direction:column;gap:7px;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#cfe6dc}
+.card .type{
+  align-self:flex-start;font-size:11.5px;padding:2px 9px;border-radius:999px;
+  background:#e6f4ee;color:var(--teal-deep);border:1px solid #cfe9df;
+}
+.card h3{font-size:15px;color:#12303a}
+.card .look{font-size:13px;color:var(--ink-soft);margin:0;flex:1}
+.card .meta{display:flex;gap:10px;font-size:11.5px;color:#8a9ba0;border-top:1px dashed var(--line-soft);padding-top:7px;flex-wrap:wrap}
+.card .kws{display:flex;gap:5px;flex-wrap:wrap}
+.card .kws span{font-size:11px;color:#6b8087;background:#f1f4f2;border-radius:4px;padding:1px 6px}
+
+/* 最新更新列表 */
+.updates{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 22px}
+.updates li{
+  display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line-soft);
+  font-size:13.5px;margin:0;
+}
+.updates .u-name{flex:none;font-weight:600;color:#12303a;max-width:11em}
+.updates .u-sum{color:var(--ink-soft);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.updates .u-time{flex:none;margin-left:auto;font-size:11.5px;color:#95a7ac}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat-btn{
+  border:1px solid var(--line);background:#fbfaf6;border-radius:var(--radius-sm);
+  padding:12px 10px;text-align:left;cursor:pointer;transition:.15s;
+  display:flex;flex-direction:column;gap:3px;
+}
+.cat-btn:hover{border-color:var(--mint);background:#f2faf6}
+.cat-btn.active{background:var(--teal);border-color:var(--teal);color:#fff}
+.cat-btn.active .cat-desc{color:#c9f2e4}
+.cat-btn b{font-size:14px}
+.cat-desc{font-size:11.5px;color:#7d9299}
+.filter-status{font-size:12.5px;color:var(--amber-deep);margin-top:10px;display:none}
+.filter-status.on{display:block}
+
+/* 深度解析 */
+.deep h3{font-size:16px;color:var(--teal-deep);margin:20px 0 8px;padding-left:10px;border-left:4px solid var(--mint)}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{font-size:14.5px;color:#2b4750;max-width:64em}
+.deep ul li{font-size:14px;color:#2b4750}
+.deep .callout{
+  background:#f4f9f6;border:1px solid #d9ebe3;border-left:5px solid var(--mint);
+  border-radius:var(--radius-sm);padding:12px 16px;margin:14px 0;font-size:14px;color:#274b45;
+}
+.deep .callout b{color:var(--teal-deep)}
+
+/* 体验指南 */
+.guide-steps{counter-reset:g;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.guide-steps li{
+  counter-increment:g;position:relative;padding:12px 14px 12px 48px;
+  background:#fbfaf6;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  font-size:13.5px;color:var(--ink-soft);margin:0;
+}
+.guide-steps li::before{
+  content:counter(g);position:absolute;left:14px;top:12px;
+  width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.guide-steps b{color:var(--teal-deep);display:block;font-size:14px;margin-bottom:2px}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  margin-bottom:9px;background:#fdfcfa;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:11px 40px 11px 14px;font-size:14px;font-weight:600;color:#1b3b44;
+  list-style:none;position:relative;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  font-size:18px;color:var(--teal);transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{background:#f1f8f5;color:var(--teal-deep)}
+.faq .ans{padding:4px 16px 14px;font-size:13.5px;color:var(--ink-soft)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cmt{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:10px 12px;background:#fdfcfa;font-size:13px;color:#33525a;
+}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.cmt .avatar{
+  width:22px;height:22px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--mint),var(--teal));color:#fff;
+  font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.cmt .nick{font-weight:600;color:var(--teal-deep);font-size:12.5px}
+.cmt .stars{color:var(--amber-deep);font-size:11px;margin-left:auto;letter-spacing:1px}
+
+/* 资讯 */
+.news{list-style:none;padding:0;margin:0}
+.news li{padding:10px 0;border-bottom:1px dashed var(--line-soft);margin:0}
+.news li:last-child{border-bottom:none}
+.news .n-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.news .n-title{font-weight:600;font-size:14px;color:#12303a}
+.news .n-date{font-size:11.5px;color:#95a7ac}
+.news .n-sum{font-size:13px;color:var(--ink-soft);margin-top:2px}
+
+/* 相关推荐 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rec-tags a{
+  font-size:13px;padding:6px 13px;border-radius:999px;
+  border:1px solid #cfe6dc;background:#f4faf7;color:var(--teal-deep);
+}
+.rec-tags a:hover{background:var(--teal);color:#fff;border-color:var(--teal);text-decoration:none}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:#d9ebe3}
+.timeline li{position:relative;padding-left:28px;margin-bottom:12px;font-size:13.5px;color:var(--ink-soft)}
+.timeline li::before{
+  content:"";position:absolute;left:1px;top:7px;width:14px;height:14px;border-radius:50%;
+  background:#fff;border:3px solid var(--mint);
+}
+.timeline b{color:var(--teal-deep);display:block;font-size:14px}
+
+/* ---------- 右栏 ---------- */
+.toc{list-style:none;padding:0;margin:0}
+.toc a{
+  display:block;padding:4px 8px;font-size:13px;color:var(--ink-soft);
+  border-left:2px solid transparent;border-radius:0 4px 4px 0;
+}
+.toc a:hover{background:#eef6f2;border-left-color:var(--mint);color:var(--teal-deep);text-decoration:none}
+.hot-list{list-style:none;padding:0;margin:0;counter-reset:h}
+.hot-list li{
+  counter-increment:h;display:flex;gap:9px;padding:7px 0;margin:0;
+  border-bottom:1px dashed var(--line-soft);font-size:13px;
+}
+.hot-list li:last-child{border-bottom:none}
+.hot-list li::before{
+  content:counter(h);flex:none;width:18px;height:18px;border-radius:5px;
+  background:#eef6f2;color:var(--teal-deep);font-size:11.5px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-top:3px;
+}
+.hot-list li:nth-child(-n+3)::before{background:var(--amber);color:#3a2a05}
+.hot-list a{color:#1b3b44;font-size:13px}
+.hot-list .h-meta{display:block;font-size:11px;color:#95a7ac}
+.read-next{font-size:13px;color:var(--ink-soft)}
+.read-next a{display:block;padding:6px 0;border-bottom:1px dashed var(--line-soft)}
+.read-next a:last-child{border-bottom:none}
+
+/* ---------- 页尾 ---------- */
+.site-foot{
+  background:linear-gradient(180deg,#0d3b38,#0a2c2a);
+  color:#c9ded8;margin-top:10px;
+}
+.foot-inner{max-width:1360px;margin:0 auto;padding:34px 22px 18px}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px;margin-bottom:22px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand b{font-size:17px;color:#fff;letter-spacing:.5px}
+.foot-desc{font-size:13px;color:#a8c6bf;max-width:26em;line-height:1.8}
+.foot-col h4{font-size:13px;color:#f2c14e;margin-bottom:10px;letter-spacing:1px}
+.foot-col a{display:block;font-size:13px;color:#bcd6cf;padding:3px 0}
+.foot-col a:hover{color:#fff;text-decoration:none}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:14px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:#8fb3ab;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1180px){
+  .layout{grid-template-columns:160px minmax(0,1fr) 220px;gap:18px}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1024px){
+  .hero-card{grid-template-columns:1fr;padding:30px 26px}
+  .hero-visual{order:-1}
+  .hero-visual svg{max-width:210px}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .col-left,.col-right{position:static;max-height:none;overflow:visible}
+  .col-left{order:0}
+  .col-main{order:1}
+  .col-right{order:2}
+  .col-left .panel{margin-bottom:12px}
+  .side-nav{display:flex;flex-wrap:wrap;gap:4px}
+  .side-nav a{padding:5px 10px;background:#f2f8f5;border:1px solid #e2efe8;font-size:12.5px}
+  .side-nav .sub{display:none}
+  .head-nav{display:none}
+  .search-wrap input{width:132px}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  :root{--announce-h:34px;--head-h:60px;--anchor-offset:104px}
+  .announce{font-size:11.5px;gap:6px}
+  .announce .hide-sm{display:none}
+  .head-inner{gap:10px;padding:8px 14px}
+  .brand-text{font-size:16px;letter-spacing:0}
+  .head-tools{gap:6px}
+  .search-wrap input{width:104px;font-size:12px;padding:6px 28px 6px 9px}
+  .btn-ghost{display:none}
+  .hero{padding:20px 14px 4px}
+  .hero-card{padding:24px 18px;border-radius:14px}
+  .hero h1{letter-spacing:2px}
+  .hero-desc{font-size:13.5px}
+  .layout{padding:16px 14px 28px;gap:14px}
+  .section{padding:16px 14px 18px;border-radius:10px}
+  .card-grid{grid-template-columns:1fr}
+  .updates{grid-template-columns:1fr}
+  .updates .u-sum{white-space:normal}
+  .guide-steps{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .intro-stats{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr}
+  .sec-head h2{font-size:17px}
+}
+@media (max-width:400px){
+  .brand-text{font-size:15px}
+  .search-wrap input{width:88px}
+  .cat-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" role="region" aria-label="站点公告">
+  <span class="dot" aria-hidden="true"></span>
+  <span><b>本周上新</b>：《厨房里的酸碱指示剂》实验拆解已更新<span class="hide-sm">，附家庭材料清单与安全提示</span></span>
+  <a href="/#latest">查看更新</a>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-head">
+  <div class="head-inner">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f6b62"/>
+        <circle cx="32" cy="30" r="12" fill="none" stroke="#4ec5a1" stroke-width="3.5"/>
+        <path d="M32 16v-5M32 49v5M18 30h-5M46 30h5" stroke="#f2c14e" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="32" cy="30" r="4" fill="#f2c14e"/>
+      </svg>
+      <span class="brand-text">秘密研究所天天向上</span>
+    </div>
+    <nav class="head-nav" aria-label="主题导航">
+      <a href="/#intro">简介</a>
+      <a href="/#hot">热门实验</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#cats">分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">问答</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search-wrap">
+        <label for="siteSearch" style="position:absolute;left:-9999px">站内搜索</label>
+        <input id="siteSearch" type="search" placeholder="搜实验 / 冷知识" autocomplete="off">
+        <button class="sbtn" id="searchBtn" type="button" aria-label="搜索">🔍</button>
+        <span class="search-note" id="searchNote"></span>
+      </div>
+      <button class="btn-ghost" type="button" id="topBtn">回到顶部</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" aria-label="主题首屏">
+  <div class="hero-card">
+    <div>
+      <span class="hero-kicker">科普实验 · 冷知识探秘 · 科学思维练习</span>
+      <h1>秘密研究所天天向上</h1>
+      <p class="hero-desc">把好奇心变成可执行的实验清单：从厨房化学到阳台物理，从冷知识溯源到逻辑拆解，每篇都给出材料、步骤与观察要点，适合通勤碎片阅读与周末动手实践。</p>
+      <ul class="hero-points">
+        <li>家庭材料即可复现</li>
+        <li>每篇附观察记录表</li>
+        <li>按难度分级追更</li>
+        <li>通勤 8 分钟读完</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="cta-main" href="/#hot">开始探索实验</a>
+        <a class="cta-sub" href="/#guide">阅读与筛选指南</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 320 300">
+        <defs>
+          <linearGradient id="flask" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4ec5a1" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#0f6b62" stop-opacity=".95"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="150" r="118" fill="none" stroke="rgba(242,193,78,.3)" stroke-width="2" stroke-dasharray="6 9"/>
+        <circle cx="160" cy="150" r="92" fill="rgba(255,255,255,.05)"/>
+        <path d="M138 60h44v34l30 78a26 26 0 0 1-24 36h-56a26 26 0 0 1-24-36l30-78V60z" fill="url(#flask)" stroke="#bff3e0" stroke-width="2"/>
+        <path d="M126 196h68" stroke="#eafaf3" stroke-width="2" stroke-dasharray="4 4"/>
+        <circle cx="150" cy="170" r="7" fill="#f2c14e"/>
+        <circle cx="176" cy="184" r="5" fill="#eafaf3" opacity=".8"/>
+        <circle cx="160" cy="152" r="4" fill="#f2c14e" opacity=".8"/>
+        <path d="M96 84l10 10M224 84l-10 10M96 216l10-10M224 216l-10-10" stroke="#4ec5a1" stroke-width="3" stroke-linecap="round"/>
+        <text x="160" y="272" text-anchor="middle" fill="#bff3e0" font-size="13" letter-spacing="3">OBSERVE · RECORD · REPEAT</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主内容 -->
+<div class="layout">
+
+  <!-- 左栏 -->
+  <aside class="col-left" aria-label="频道与标签索引">
+    <div class="panel">
+      <div class="panel-title">频道导航</div>
+      <ul class="side-nav">
+        <li><a href="/#intro">内容简介</a></li>
+        <li><a href="/#hot">热门实验推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类筛选</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">读者评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rec">相关推荐</a></li>
+        <li><a href="/#timeline">更新脉络</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">热门标签</div>
+      <div class="tag-cloud">
+        <a href="/#cats">厨房化学</a>
+        <a href="/#cats">阳台物理</a>
+        <a href="/#cats">冷知识溯源</a>
+        <a href="/#cats">逻辑拆解</a>
+        <a href="/#cats">观察记录</a>
+        <a href="/#cats">家庭材料</a>
+        <a href="/#cats">睡前轻读</a>
+        <a href="/#cats">通勤速览</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏 -->
+  <main class="col-main">
+
+    <!-- 1 内容简介 -->
+    <section class="section intro" id="intro">
+      <div class="sec-head"><h2>内容简介：把好奇心落到实验台上的科普站点</h2></div>
+      <p><span class="hl">秘密研究所天天向上</span>是一个以动手实验与冷知识溯源为主线的科普内容站。它不追求炫目的结论，而是把每个现象拆成材料、步骤、观察、解释四段，让读者在厨房、阳台、书桌上就能复现一次小型研究。站内内容围绕“厨房化学”“阳台物理”“冷知识溯源”“逻辑拆解”四条主线展开，既有适合睡前轻读的三分钟短文，也有需要半小时动手的完整实验方案。</p>
+      <p>如果你正在寻找适合通勤速览的科普碎片，这里每篇都控制在 800 字以内并配观察记录表；如果你想带孩子做一次家庭小实验，实验卡片会标注材料是否易得、步骤是否安全、预期现象是否明显。对于喜欢较真的读者，冷知识溯源类内容会给出原始出处与常见误传的对照，帮助你判断一条说法值不值得信。</p>
+      <p>内容更新以周为单位，实验拆解与冷知识交替上线。每篇正文都保留“失败可能”一节，说明实验不成功时常见的原因，例如水温差异、材料纯度、容器材质，这些细节往往比成功结论更有信息量。读者可以按难度分级追更，也可以按主题筛选，把零散的好奇心积累成一条可回看的探索路线。</p>
+      <div class="intro-stats">
+        <div><b>4</b><span>内容主线</span></div>
+        <div><b>120+</b><span>实验与冷知识条目</span></div>
+        <div><b>8 分钟</b><span>单篇平均阅读时长</span></div>
+        <div><b>每周</b><span>固定更新节奏</span></div>
+      </div>
+    </section>
+
+    <!-- 2 热门内容推荐 -->
+    <section class="section" id="hot">
+      <div class="sec-head"><h2>热门实验与冷知识推荐</h2><span class="h2note">按近期阅读与收藏热度排序</span></div>
+      <p class="sec-lead">以下条目均可使用家庭常见材料复现，卡片标注了类型、适合场景与观察重点，方便你按时间与难度挑选。</p>
+      <div class="card-grid" id="hotGrid">
+        <article class="card">
+          <span class="type">厨房化学</span>
+          <h3>紫甘蓝酸碱指示剂家庭版</h3>
+          <p class="look">用紫甘蓝汁测试白醋、小苏打与柠檬水，观察颜色从紫红到蓝绿的连续变化，理解 pH 与色素结构的关系。</p>
+          <div class="kws"><span>家庭材料</span><span>颜色变化</span><span>酸碱入门</span></div>
+          <div class="meta"><span>热度 9820</span><span>难度 ★☆☆</span><span>约 25 分钟</span></div>
+        </article>
+        <article class="card">
+          <span class="type">阳台物理</span>
+          <h3>硬币与纸片自由落体对照</h3>
+          <p class="look">把纸片揉成团与平铺分别与硬币同时下落，比较空气阻力对下落时间的影响，记录三次取平均。</p>
+          <div class="kws"><span>空气阻力</span><span>对照实验</span><span>阳台可做</span></div>
+          <div class="meta"><span>热度 8740</span><span>难度 ★☆☆</span><span>约 15 分钟</span></div>
+        </article>
+        <article class="card">
+          <span class="type">冷知识溯源</span>
+          <h3>“热水比冷水结冰快”到底靠不靠谱</h3>
+          <p class="look">梳理姆潘巴现象的原始观察、复现条件与争议点，说明为什么家庭冰箱很难稳定复现该结论。</p>
+          <div class="kws"><span>姆潘巴现象</span><span>复现条件</span><span>睡前轻读</span></div>
+          <div class="meta"><span>热度 8210</span><span>难度 ★★☆</span><span>约 9 分钟</span></div>
+        </article>
+        <article class="card">
+          <span class="type">逻辑拆解</span>
+          <h3>“每天八杯水”说法的来源与漏洞</h3>
+          <p class="look">追踪该建议的传播路径，区分总摄入量与饮水量，给出按体重与活动量估算的简易思路。</p>
+          <div class="kws"><span>信息溯源</span><span>饮水建议</span><span>通勤速览</span></div>
+          <div class="meta"><span>热度 7930</span><span>难度 ★☆☆</span><span>约 7 分钟</span></div>
+        </article>
+        <article class="card">
+          <span class="type">厨房化学</span>
+          <h3>小苏打与白醋的泡沫高度对照</h3>
+          <p class="look">固定白醋用量，逐级增加小苏打，测量泡沫最高点，讨论反应物配比与气体释放速度的关系。</p>
+          <div class="kws"><span>反应速率</span><span>定量观察</span><span>亲子实验</span></div>
+          <div class="meta"><span>热度 7650</span><span>难度 ★★☆</span><span>约 30 分钟</span></div>
+        </article>
+        <article class="card">
+          <span class="type">阳台物理</span>
+          <h3>手机慢动作拍水滴滴落形变</h3>
+          <p class="look">用慢动作模式记录水滴从勺沿落下的瞬间，观察颈部拉伸与断裂，理解表面张力在其中的作用。</p>
+          <div class="kws"><span>表面张力</span><span>慢动作</span><span>周末动手</span></div>
+          <div class="meta"><span>热度 7180</span><span>难度 ★★☆</span><span>约 20 分钟</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="section" id="latest">
+      <div class="sec-head"><h2>最新更新与近期上架</h2><span class="h2note">按上线时间排列</span></div>
+      <ul class="updates">
+        <li><span class="u-name">食盐结晶观察</span><span class="u-sum">饱和盐水缓慢蒸发，记录晶体的生长位置与形状差异</span><span class="u-time">06-18</span></li>
+        <li><span class="u-name">纸桥承重测试</span><span class="u-sum">改变折叠方式比较承重上限，讨论结构刚度来源</span><span class="u-time">06-17</span></li>
+        <li><span class="u-name">“左脑右脑”说法溯源</span><span class="u-sum">追踪该说法在科普读物中的传播与误读路径</span><span class="u-time">06-16</span></li>
+        <li><span class="u-name">吸管喷雾器原理</span><span class="u-sum">用两根吸管演示伯努利效应，解释雾化条件</span><span class="u-time">06-15</span></li>
+        <li><span class="u-name">鸡蛋浮沉与密度梯度</span><span class="u-sum">逐次加盐观察悬浮点，估算盐水浓度范围</span><span class="u-time">06-14</span></li>
+        <li><span class="u-name">影子长度测太阳高度</span><span class="u-sum">用直尺与影子比例粗算正午太阳高度角</span><span class="u-time">06-13</span></li>
+        <li><span class="u-name">“隔夜菜致癌”证据梳理</span><span class="u-sum">区分亚硝酸盐含量变化与风险结论之间的差距</span><span class="u-time">06-12</span></li>
+        <li><span class="u-name">自制简易pH试纸</span><span class="u-sum">用指示剂浸泡滤纸晾干，测试常见液体酸碱度</span><span class="u-time">06-11</span></li>
+        <li><span class="u-name">气球静电吸附实验</span><span class="u-sum">摩擦次数与吸附距离的关系，记录湿度影响</span><span class="u-time">06-10</span></li>
+        <li><span class="u-name">“鱼的记忆只有七秒”核查</span><span class="u-sum">列举实验证据与常见误传版本，给出判断方法</span><span class="u-time">06-09</span></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="section" id="cats">
+      <div class="sec-head"><h2>按类别筛选内容</h2><span class="h2note">点击类别过滤上方热门卡片</span></div>
+      <p class="sec-lead">分类对应用户最常搜索的方向词。选择任一类别后，上方热门推荐区只保留该类别条目；再次点击同一类别可取消筛选。</p>
+      <div class="cat-grid" id="catGrid">
+        <button class="cat-btn active" type="button" data-cat="all"><b>全部内容</b><span class="cat-desc">显示所有热门条目</span></button>
+        <button class="cat-btn" type="button" data-cat="厨房化学"><b>厨房化学</b><span class="cat-desc">酸碱、结晶、反应速率</span></button>
+        <button class="cat-btn" type="button" data-cat="阳台物理"><b>阳台物理</b><span class="cat-desc">力学、光学、流体现象</span></button>
+        <button class="cat-btn" type="button" data-cat="冷知识溯源"><b>冷知识溯源</b><span class="cat-desc">说法出处与误传对照</span></button>
+        <button class="cat-btn" type="button" data-cat="逻辑拆解"><b>逻辑拆解</b><span class="cat-desc">论证结构与常见漏洞</span></button>
+        <button class="cat-btn" type="button" data-cat="亲子实验"><b>亲子实验</b><span class="cat-desc">低风险、易复现</span></button>
+        <button class="cat-btn" type="button" data-cat="睡前轻读"><b>睡前轻读</b><span class="cat-desc">8 分钟内读完</span></button>
+        <button class="cat-btn" type="button" data-cat="通勤速览"><b>通勤速览</b><span class="cat-desc">碎片时间可消化</span></button>
+      </div>
+      <div class="filter-status" id="filterStatus" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="section deep" id="deep">
+      <div class="sec-head"><h2>深度解析：一次家庭实验怎样做才算“有效观察”</h2><span class="h2note">约 850 字</span></div>
+      <p>很多人做科普实验时，步骤照做了，现象也看到了，却说不清自己到底验证了什么。问题往往不在动手能力，而在观察设计。一次有效的家庭实验，需要先明确“我要比较什么”，再决定“控制哪些条件”，最后才是“记录什么”。<strong>秘密研究所天天向上</strong>在每篇实验拆解里都会把这三步单独列出，原因就在这里。</p>
+
+      <h3>先确定变量，再准备材料</h3>
+      <p>以紫甘蓝指示剂为例，如果目标是判断某种液体的酸碱性，那么液体种类是自变量，颜色是观测结果；如果目标是比较不同蔬菜汁的指示灵敏度，那么蔬菜种类才是自变量，液体样本必须固定。两种目标对应两套材料清单，混在一起就会得出含糊结论。</p>
+      <ul>
+        <li>自变量：你主动改变的那一个因素，一次只改一个。</li>
+        <li>因变量：你用来判断结果的可观测指标，例如颜色、高度、时间。</li>
+        <li>控制变量：除自变量外必须保持一致的条件，例如水温、用量、容器。</li>
+      </ul>
+
+      <h3>控制条件比追求“成功”更重要</h3>
+      <p>家庭环境很难做到实验室级别的控制，但至少可以做到记录。水温差两度、白醋品牌不同、容器口径不一致，都会影响泡沫高度或结晶速度。把这些条件写进观察记录表，比反复重做直到出现“标准现象”更有价值。失败记录同样是数据，它能告诉你哪个条件的影响比预想更大。</p>
+      <div class="callout"><b>记录要点：</b>日期与室温、材料品牌与用量、操作顺序、现象出现的时间点、与你预期不一致的地方。五项写全，下次复现就有参照。</div>
+
+      <h3>用对照把“看到”变成“证明”</h3>
+      <p>对照实验是家庭场景里最容易补上的一环。想让“纸片揉团落得更快”这个观察站得住，就需要同时放下平铺纸片与纸团，最好再放一枚硬币作为参照。只有两组以上结果放在一起比较，空气阻力的作用才说得清。<strong>秘密研究所天天向上</strong>的对照类条目，通常会给出一张三行对照表，读者照着填即可。</p>
+      <p>另一个常见误区是只做一次就下结论。颜色变化、泡沫高度、下落时间都存在随机波动，至少重复三次取平均，或者记录波动范围，结论才更稳。对于需要几十秒才显现的现象，建议用手机录像回看，避免肉眼错过关键瞬间。</p>
+
+      <h3>把结论写成一个可检验的句子</h3>
+      <p>好的实验结论不是“很好玩”，而是“在室温 25 度、白醋 20 毫升条件下，小苏打从 2 克增加到 6 克，泡沫最高点从 3 厘米升到 7 厘米，继续增加后高度不再明显上升”。这样的句子包含条件、操作与结果，别人可以照着检验，也可以在此基础上改一个条件继续做。</p>
+      <p>如果你习惯通勤时读科普，可以先用碎片时间看完实验设计与对照思路，把动手环节留到周末。把每篇的观察记录表攒起来，一个月后回看，你会发现自己的提问方式已经变了：从“这个现象好神奇”变成“这个现象在什么条件下会改变”。这正是科学思维练习最实在的收获。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="section" id="guide">
+      <div class="sec-head"><h2>阅读与筛选指南</h2><span class="h2note">从进入到动手的五个步骤</span></div>
+      <ol class="guide-steps">
+        <li><b>先看难度标识</b>每张卡片标注 ★ 到 ★★★，一星适合零基础与亲子，三星建议预留整块时间并提前备料。</li>
+        <li><b>用分类缩小范围</b>点击分类按钮即可过滤热门卡片，再点一次取消。手机端分类按钮为两列排列，可直接点按。</li>
+        <li><b>按场景选阅读节奏</b>通勤速览与睡前轻读条目控制在 8 分钟内，完整实验方案建议周末阅读并同步准备材料。</li>
+        <li><b>打开观察记录表</b>深度解析与实验卡片会给出记录要点，照着填写比凭记忆复述更可靠。</li>
+        <li><b>沿推荐路径延伸</b>每篇末尾的相关推荐给出同类或相邻主题，方便你从单点实验走向一条探索路线。</li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="section faq" id="faq">
+      <div class="sec-head"><h2>常见问题</h2><span class="h2note">围绕实验复现与内容选择</span></div>
+      <details>
+        <summary>厨房化学类实验适合几岁的孩子一起做？</summary>
+        <div class="ans">标注一星的条目通常适合小学中高年级在成人陪同下操作，涉及白醋、小苏打等常见材料。涉及加热、明火或强碱的条目会单独标注，建议初中以上并在成人全程看护下进行。年龄只是参考，更关键的是孩子能否按步骤操作并耐心记录现象。</div>
+      </details>
+      <details>
+        <summary>为什么我按步骤做了，颜色变化却没有那么明显？</summary>
+        <div class="ans">常见原因有三个：指示剂浓度过低、待测液体被稀释、容器残留洗洁精影响显色。建议先用白醋与清水做一组对照，确认指示剂本身有效，再测试其他液体。记录时把用量和稀释倍数写清楚，下次就能定位问题。</div>
+      </details>
+      <details>
+        <summary>冷知识溯源类内容一般多久更新一次？</summary>
+        <div class="ans">目前保持每周一至两篇的节奏，与实验拆解交替上线。溯源类条目需要核对原始文献与常见转述版本，单篇准备时间较长，因此更新频率略低于实验类。可以在最新更新区查看最近上架时间。</div>
+      </details>
+      <details>
+        <summary>通勤时只有十分钟，先读哪一类比较合适？</summary>
+        <div class="ans">优先选择标注“通勤速览”或“睡前轻读”的条目，这类内容以说法核查与概念解释为主，不需要动手材料。如果对某个实验感兴趣，可以先读实验设计部分，把材料准备与操作留到有空的时候。</div>
+      </details>
+      <details>
+        <summary>实验失败了，记录还有意义吗？</summary>
+        <div class="ans">有意义，而且往往是信息量更大的部分。失败记录能暴露你没意识到的控制变量，例如室温、水质、容器口径。把失败现象与操作条件一起写下来，下一次调整一个条件再试，这个过程本身就是科学思维练习。</div>
+      </details>
+      <details>
+        <summary>站内条目和网上流传的科普短视频说法不一致，该信哪个？</summary>
+        <div class="ans">先看说法是否给出可复现的条件与出处。短视频常省略条件，导致结论被放大。站内溯源类内容会列出原始观察、复现条件与争议点，你可以按给出的条件自己试一次，再判断哪种说法更站得住。</div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="section" id="comments">
+      <div class="sec-head"><h2>读者评论</h2><span class="h2note">来自实验记录与阅读反馈</span></div>
+      <div class="comments">
+        <div class="cmt"><div class="who"><span class="avatar">林</span><span class="nick">林间小满</span><span class="stars">★★★★★</span></div>紫甘蓝那篇照着做了，孩子第一次主动要求记录颜色，比刷视频有用。</div>
+        <div class="cmt"><div class="who"><span class="avatar">周</span><span class="nick">周末实验室</span><span class="stars">★★★★☆</span></div>对照表设计得很实用，就是希望材料清单能再标一下替代品。</div>
+        <div class="cmt"><div class="who"><span class="avatar">陈</span><span class="nick">陈小北</span><span class="stars">★★★★★</span></div>通勤路上看完“八杯水”那篇，回家就把家里的水杯换了个带刻度的。</div>
+        <div class="cmt"><div class="who"><span class="avatar">苏</span><span class="nick">苏打气泡</span><span class="stars">★★★★☆</span></div>泡沫高度实验做了三次结果都不一样，后来发现是白醋品牌不同，学到了。</div>
+        <div class="cmt"><div class="who"><span class="avatar">何</span><span class="nick">何同学在备课</span><span class="stars">★★★★★</span></div>作为科学课补充材料很合适，难度分级清楚，直接能拿来改教案。</div>
+        <div class="cmt"><div class="who"><span class="avatar">吴</span><span class="nick">梧叶知秋</span><span class="stars">★★★☆☆</span></div>内容不错，但部分实验对租房党不太友好，希望多出些不用明火的。</div>
+        <div class="cmt"><div class="who"><span class="avatar">郑</span><span class="nick">郑一勺</span><span class="stars">★★★★★</span></div>喜欢“失败可能”那一节，终于有人承认实验不是每次都能成功。</div>
+        <div class="cmt"><div class="who"><span class="avatar">许</span><span class="nick">许多多</span><span class="stars">★★★★☆</span></div>慢动作拍水滴那篇拍出来了，虽然糊了一半，但孩子看得特别起劲。</div>
+        <div class="cmt"><div class="who"><span class="avatar">冯</span><span class="nick">冯工下班了</span><span class="stars">★★★★★</span></div>逻辑拆解部分适合我这种爱较真的人，论证结构讲得很清楚。</div>
+        <div class="cmt"><div class="who"><span class="avatar">高</span><span class="nick">高个儿阿哲</span><span class="stars">★★★★☆</span></div>分类筛选挺好用，就是手机端点完想回到顶部有点绕。</div>
+        <div class="cmt"><div class="who"><span class="avatar">罗</span><span class="nick">罗盘指针</span><span class="stars">★★★★★</span></div>影子测太阳高度那篇，我按记录表做了一周，数据真的能看出趋势。</div>
+        <div class="cmt"><div class="who"><span class="avatar">唐</span><span class="nick">糖霜实验日记</span><span class="stars">★★★★☆</span></div>希望能出一期关于结晶速度的进阶版，现在这版孩子觉得不过瘾。</div>
+        <div class="cmt"><div class="who"><span class="avatar">叶</span><span class="nick">叶脉书签</span><span class="stars">★★★★★</span></div>睡前轻读的篇幅控制得好，八分钟刚好，不会越看越精神。</div>
+        <div class="cmt"><div class="who"><span class="avatar">韩</span><span class="nick">韩梅梅的猫</span><span class="stars">★★★★☆</span></div>评论区的实验翻车分享比正文还有意思，建议开个翻车合集。</div>
+        <div class="cmt"><div class="who"><span class="avatar">彭</span><span class="nick">彭湃的湃</span><span class="stars">★★★★★</span></div>溯源类内容做得扎实，会标注常见误传版本，这点很少见。</div>
+        <div class="cmt"><div class="who"><span class="avatar">邓</span><span class="nick">邓布利多学徒</span><span class="stars">★★★★☆</span></div>整体不错，个别条目的材料清单可以再精简，家里东西太多反而挑花眼。</div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="section" id="news">
+      <div class="sec-head"><h2>相关资讯</h2><span class="h2note">科普内容与实验教育动态</span></div>
+      <ul class="news">
+        <li>
+          <div class="n-top"><span class="n-title">家庭科学实验材料包需求上升，安全提示成选购重点</span><span class="n-date">2024-06-16</span></div>
+          <div class="n-sum">多个科普内容团队开始为实验条目配套材料清单，家长更关注是否含明火与强碱成分。</div>
+        </li>
+        <li>
+          <div class="n-top"><span class="n-title">“冷知识”类内容进入核查阶段，出处标注成为新惯例</span><span class="n-date">2024-06-12</span></div>
+          <div class="n-sum">越来越多科普作者在条目末尾附上原始观察与常见误传对照，读者判断成本随之下降。</div>
+        </li>
+        <li>
+          <div class="n-top"><span class="n-title">短视频科普省略条件引争议，复现实验受关注</span><span class="n-date">2024-06-08</span></div>
+          <div class="n-sum">部分流传甚广的实验结论因缺少控制变量说明被质疑，图文类复现指南阅读量上升。</div>
+        </li>
+        <li>
+          <div class="n-top"><span class="n-title">中小学科学课程增加观察记录比重</span><span class="n-date">2024-06-03</span></div>
+          <div class="n-sum">多地教研材料强调记录过程而非只看结果，与家庭实验类内容的记录表设计思路接近。</div>
+        </li>
+        <li>
+          <div class="n-top"><span class="n-title">慢动作拍摄普及，流体与力学现象观察门槛降低</span><span class="n-date">2024-05-28</span></div>
+          <div class="n-sum">手机慢动作功能让水滴形变、气球破裂等瞬时现象更容易被记录和分析。</div>
+        </li>
+        <li>
+          <div class="n-top"><span class="n-title">碎片化科普阅读习惯调查：通勤时段占比最高</span><span class="n-date">2024-05-21</span></div>
+          <div class="n-sum">调查显示通勤时段读者更偏好八分钟内可读完的条目，长篇实验方案多留到周末阅读。</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="section" id="rec">
+      <div class="sec-head"><h2>相关推荐</h2><span class="h2note">按主题方向延伸</span></div>
+      <div class="rec-tags">
+        <a href="/#hot">厨房化学入门实验</a>
+        <a href="/#hot">阳台物理对照实验</a>
+        <a href="/#hot">冷知识出处核查</a>
+        <a href="/#hot">论证结构拆解</a>
+        <a href="/#hot">亲子低风险实验</a>
+        <a href="/#hot">睡前八分钟科普</a>
+        <a href="/#hot">通勤速览清单</a>
+        <a href="/#hot">观察记录表模板</a>
+      </div>
+    </section>
+
+    <!-- 11 更新脉络 -->
+    <section class="section" id="timeline">
+      <div class="sec-head"><h2>更新脉络</h2><span class="h2note">近期内容推进节奏</span></div>
+      <ul class="timeline">
+        <li><b>六月第三周 · 厨房化学专题</b>集中上线酸碱指示剂、结晶观察与小苏打反应速率三组实验，配套记录表同步更新。</li>
+        <li><b>六月第二周 · 冷知识核查专题</b>梳理“左脑右脑”“隔夜菜致癌”“鱼的记忆”三条常见说法的来源与误传版本。</li>
+        <li><b>六月第一周 · 阳台物理专题</b>上线自由落体对照、吸管喷雾器与慢动作水滴三篇，强调控制变量与重复测量。</li>
+        <li><b>五月下旬 · 观察方法专题</b>补充变量识别与结论写法两篇方法论内容，作为实验条目的前置阅读。</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- 右栏 -->
+  <aside class="col-right" aria-label="辅助阅读">
+    <div class="panel">
+      <div class="panel-title">本页目录</div>
+      <ul class="toc">
+        <li><a href="/#intro">内容简介</a></li>
+        <li><a href="/#hot">热门推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#cats">分类筛选</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">读者评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rec">相关推荐</a></li>
+        <li><a href="/#timeline">更新脉络</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">热门条目</div>
+      <ol class="hot-list">
+        <li><div><a href="/#hot">紫甘蓝酸碱指示剂</a><span class="h-meta">厨房化学 · 一星</span></div></li>
+        <li><div><a href="/#hot">硬币纸片自由落体</a><span class="h-meta">阳台物理 · 一星</span></div></li>
+        <li><div><a href="/#hot">姆潘巴现象核查</a><span class="h-meta">冷知识溯源 · 二星</span></div></li>
+        <li><div><a href="/#hot">八杯水说法溯源</a><span class="h-meta">逻辑拆解 · 一星</span></div></li>
+        <li><div><a href="/#hot">小苏打泡沫高度</a><span class="h-meta">厨房化学 · 二星</span></div></li>
+        <li><div><a href="/#hot">慢动作水滴形变</a><span class="h-meta">阳台物理 · 二星</span></div></li>
+      </ol>
+    </div>
+    <div class="panel">
+      <div class="panel-title">延伸阅读</div>
+      <div class="read-next">
+        <a href="/#deep">变量识别与控制条件</a>
+        <a href="/#deep">结论怎么写才可检验</a>
+        <a href="/#guide">按难度挑选实验</a>
+        <a href="/#faq">实验失败怎么记录</a>
+        <a href="/#timeline">近期专题推进</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#14796c"/>
+            <circle cx="32" cy="30" r="12" fill="none" stroke="#bff3e0" stroke-width="3.5"/>
+            <path d="M32 16v-5M32 49v5M18 30h-5M46 30h5" stroke="#f2c14e" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="32" cy="30" r="4" fill="#f2c14e"/>
+          </svg>
+          <b>秘密研究所天天向上</b>
+        </div>
+        <p class="foot-desc">以动手实验与冷知识溯源为主线的科普内容站，把好奇心拆成材料、步骤、观察与解释，让每个读者都能在家复现一次小型研究。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容主线</h4>
+        <a href="/#cats">厨房化学</a>
+        <a href="/#cats">阳台物理</a>
+        <a href="/#cats">冷知识溯源</a>
+        <a href="/#cats">逻辑拆解</a>
+      </div>
+      <div class="foot-col">
+        <h4>阅读场景</h4>
+        <a href="/#guide">通勤速览</a>
+        <a href="/#guide">睡前轻读</a>
+        <a href="/#guide">亲子实验</a>
+        <a href="/#guide">周末动手</a>
+      </div>
+      <div class="foot-col">
+        <h4>快速入口</h4>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rec">相关推荐</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 秘密研究所天天向上 · 科普内容示例站</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 回到顶部
+  var topBtn = document.getElementById('topBtn');
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  // 分类筛选
+  var catGrid = document.getElementById('catGrid');
+  var hotGrid = document.getElementById('hotGrid');
+  var filterStatus = document.getElementById('filterStatus');
+  if(catGrid && hotGrid){
+    var cards = Array.prototype.slice.call(hotGrid.querySelectorAll('.card'));
+    catGrid.addEventListener('click', function(e){
+      var btn = e.target.closest('.cat-btn');
+      if(!btn) return;
+      var cat = btn.getAttribute('data-cat');
+      var isActive = btn.classList.contains('active');
+      // 取消同类别
+      if(isActive && cat !== 'all'){
+        cat = 'all';
+      }
+      Array.prototype.forEach.call(catGrid.querySelectorAll('.cat-btn'), function(b){
+        b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+      });
+      var shown = 0;
+      cards.forEach(function(card){
+        var type = card.querySelector('.type');
+        var kws = card.querySelector('.kws');
+        var text = (type ? type.textContent : '') + ' ' + (kws ? kws.textContent : '');
+        var match = (cat === 'all') || text.indexOf(cat) > -1;
+        card.style.display = match ? '' : 'none';
+        if(match) shown++;
+      });
+      if(filterStatus){
+        if(cat === 'all'){
+          filterStatus.classList.remove('on');
+          filterStatus.textContent = '';
+        }else{
+          filterStatus.classList.add('on');
+          filterStatus.textContent = '已筛选「' + cat + '」：共 ' + shown + ' 条，再次点击可取消。';
+        }
+      }
+    });
+  }
+
+  // 站内搜索
+  var input = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var note = document.getElementById('searchNote');
+  function doSearch(){
+    if(!input) return;
+    var q = input.value.trim();
+    if(!q){
+      if(note){ note.classList.remove('on'); note.textContent=''; }
+      return;
+    }
+    // 优先在热门卡片中查找，再查正文段落
+    var hit = null;
+    var cards = document.querySelectorAll('#hotGrid .card');
+    for(var i=0;i<cards.length;i++){
+      if(cards[i].textContent.indexOf(q) > -1){ hit = cards[i]; break; }
+    }
+    if(hit){
+      hit.scrollIntoView({behavior:'smooth', block:'center'});
+      if(note){ note.classList.remove('on'); note.textContent=''; }
+      return;
+    }
+    var sections = document.querySelectorAll('main .section');
+    for(var j=0;j<sections.length;j++){
+      if(sections[j].textContent.indexOf(q) > -1){
+        sections[j].scrollIntoView({behavior:'smooth', block:'start'});
+        if(note){ note.classList.remove('on'); note.textContent=''; }
+        return;
+      }
+    }
+    if(note){
+      note.classList.add('on');
+      note.textContent = '未找到「' + q + '」，试试“酸碱”“水滴”“溯源”等关键词。';
+    }
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(input){
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    input.addEventListener('input', function(){
+      if(note && !input.value.trim()){ note.classList.remove('on'); note.textContent=''; }
+    });
+  }
+})();
+</script>
+</body>
+                              </html>
